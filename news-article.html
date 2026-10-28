@@ -23,6 +23,13 @@
     </style>
     <link rel="icon" href="/favicon.ico" sizes="any">
     <meta name="theme-color" content="#0f766e">
+<style>
+/* رابط أصحاب المراكز - نيون مميز */
+nav a.nav-neon,div#mobile-menu a.nav-neon{color:#059669 !important;font-weight:800 !important;text-shadow:0 0 6px rgba(16,185,129,.9),0 0 18px rgba(16,185,129,.55),0 0 32px rgba(16,185,129,.35);animation:neonPulse 2.2s ease-in-out infinite}
+nav a.nav-neon:hover,div#mobile-menu a.nav-neon:hover{color:#047857 !important}
+@keyframes neonPulse{0%,100%{text-shadow:0 0 6px rgba(16,185,129,.9),0 0 18px rgba(16,185,129,.55),0 0 32px rgba(16,185,129,.35)}50%{text-shadow:0 0 10px rgba(16,185,129,1),0 0 26px rgba(16,185,129,.75),0 0 44px rgba(16,185,129,.5)}}
+@media (prefers-reduced-motion: reduce){nav a.nav-neon,div#mobile-menu a.nav-neon{animation:none}}
+</style>
 </head>
 <body class="text-gray-800 antialiased flex flex-col min-h-screen">
 
@@ -33,6 +40,7 @@
                 <a href="site-index" class="text-gray-700 hover:text-teal-600 transition">الرئيسية</a>
                 <a href="tools" class="text-gray-700 hover:text-teal-600 transition">الأدوات</a>
                 <a href="news" class="text-teal-600 font-bold transition">الأخبار</a>
+                            <a href="centers" class="nav-neon text-gray-700 hover:text-teal-600 transition">🏢 أصحاب المراكز</a>
             </nav>
         </div>
     </header>
