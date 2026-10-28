@@ -98,7 +98,7 @@ function inline(s){
   s=s.replace(/(^|[^*])\*([^*\n]+)\*/g,'$1<em>$2</em>');
   return s;
 }
-/* محوّل Markdown صغير (بلا مكتبات — باش الصفحة تبقى خفيفة): عناوين، قوائم، روابط، صور، عريض، مائل، اقتباس */
+/* محوّل Markdown صغير (دون مكتبات — لتبقى الصفحة خفيفة): عناوين، قوائم، روابط، صور، عريض، مائل، اقتباس */
 function md(src){
   var lines=src.replace(/\r\n?/g,'\n').split('\n'), out=[], i=0;
   function flushPara(buf){ if(buf.length) out.push('<p>'+inline(buf.join(' '))+'</p>'); }

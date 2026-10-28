@@ -79,7 +79,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
 
     <!-- شريط الأخبار المتحرك: تحت الشريط العلوي مباشرة. النسخة الثانية مخفية عن قارئات الشاشة
          وعن التنقل بلوحة المفاتيح (aria-hidden + tabindex) لأنها تكرار للحركة السلسة فقط.
-         مقالات لوحة التحكم تُضاف للنسختين معا عبر نفس جلب GitHub API أسفله، بلا طلب شبكة إضافي. -->
+         مقالات لوحة التحكم تُضاف للنسختين معا عبر نفس جلب GitHub API أسفله، دون طلب شبكة إضافي. -->
     <div class="news-ticker" role="region" aria-label="شريط آخر الأخبار">
         <div class="news-ticker-track" id="ticker-track">
             <div class="news-ticker-set" id="ticker-set-1">
@@ -99,7 +99,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
                 <h1 class="text-3xl md:text-5xl font-bold text-teal-900 mb-4">أخبار في عالم الصحة</h1>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">مقالات أصلية بصياغتنا، موثقة بالمصادر العلمية: معلومة موثوقة، ونصيحة عملية، وروابط الأبحاث الأصلية — بلا نقل وبلا مبالغة.</p>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">مقالات أصلية بصياغتنا، موثقة بالمصادر العلمية: معلومة موثوقة، ونصيحة عملية، وروابط الأبحاث الأصلية — دون نقل وبلا مبالغة.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -212,7 +212,7 @@ fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/content/articles
     }).join('');
     section.style.display='block';
     /* نفس مقالات لوحة التحكم تدخل شريط الأخبار المتحرك: نفس العنصر يُضاف للنسختين حتى يبقى
-       عرضهما متساويا وتدور الحركة بسلاسة. نسخة الشريط الثانية بلا تركيز لوحة مفاتيح لأنها تكرار مرئي فقط. */
+       عرضهما متساويا وتدور الحركة بسلاسة. نسخة الشريط الثانية دون تركيز لوحة مفاتيح لأنها تكرار مرئي فقط. */
     var t1=document.getElementById('ticker-set-1'), t2=document.getElementById('ticker-set-2');
     if(t1 && t2){
       var tItem=function(a,tab){
@@ -225,7 +225,7 @@ fetch('https://api.github.com/repos/'+OWNER+'/'+REPO+'/contents/content/articles
     }
   });
 })
-.catch(function(){ /* بلا مقالات لوحة تحكم بعد — القسم يبقى مخفي */ });
+.catch(function(){ /* دون مقالات لوحة تحكم بعد — القسم يبقى مخفي */ });
 })();
 </script>
 
