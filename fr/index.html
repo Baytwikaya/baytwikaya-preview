@@ -40,10 +40,10 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 33.5612656,
-        "longitude": -7.5985689
+        "latitude": 33.5613106,
+        "longitude": -7.5984306
       },
-      "hasMap": "https://www.google.com/maps/place/بيت+الوقاية/@33.5612656,-7.5985689,17z",
+      "hasMap": "https://www.google.com/maps/place/%D8%A8%D9%8A%D8%AA+%D8%A7%D9%84%D9%88%D9%82%D8%A7%D9%8A%D8%A9%E2%80%AD/@33.5613106,-7.5984306,17z/data=!3m1!4b1!4m6!3m5!1s0xda63376bc6640ff:0xd097ecd4ea8057d!8m2!3d33.5613106!4d-7.5984306!16s%2Fg%2F11rkf32518!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -67,7 +67,7 @@
       ],
       "sameAs": [
         "https://www.instagram.com/baytwikaya",
-        "https://www.google.com/maps/place/بيت+الوقاية/@33.5612656,-7.5985689,17z"
+        "https://www.google.com/maps/place/%D8%A8%D9%8A%D8%AA+%D8%A7%D9%84%D9%88%D9%82%D8%A7%D9%8A%D8%A9%E2%80%AD/@33.5613106,-7.5984306,17z/data=!3m1!4b1!4m6!3m5!1s0xda63376bc6640ff:0xd097ecd4ea8057d!8m2!3d33.5613106!4d-7.5984306!16s%2Fg%2F11rkf32518!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
       ]
     }
     </script>
@@ -101,7 +101,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
 <body class="text-gray-800 antialiased relative flex flex-col min-h-screen">
 
 
-   <!-- شريط التنقل الموحد -->
+   
     <nav class="bg-white shadow-md fixed w-full z-40 top-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
@@ -143,11 +143,11 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
         </div>
     </nav>
 <script>
-(function(){var b=document.getElementById('langBtn'),m=document.getElementById('langMenu');if(!b||!m)return;b.addEventListener('click',function(e){e.stopPropagation();var o=m.hasAttribute('hidden');if(o){m.removeAttribute('hidden');b.setAttribute('aria-expanded','true');}else{m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('click',function(e){if(!m.hasAttribute('hidden')&&!b.contains(e.target)&&!m.contains(e.target)){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hasAttribute('hidden')){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});})();
+(function(){var b=document.getElementById('langBtn'),m=document.getElementById('langMenu');if(!b||!m)return;b.addEventListener('click',function(e){e.stopPropagation();var o=m.hasAttribute('hidden');if(o){m.removeAttribute('hidden');b.setAttribute('aria-expanded','true');var mm=document.getElementById('mobile-menu');if(mm){mm.classList.add('hidden');mm.classList.remove('flex');}}else{m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('click',function(e){if(!m.hasAttribute('hidden')&&!b.contains(e.target)&&!m.contains(e.target)){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hasAttribute('hidden')){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});})();
 </script>
 
-    <!-- القسم الرئيسي -->
-    <section id="home" class="relative pt-20 min-h-[90vh] flex items-center justify-center bg-cover bg-center bg-no-repeat" style="background-image: url('Cupping_therapy_promotional_poster_2K.jpg');">
+    
+    <section id="home" class="relative pt-20 min-h-[90vh] flex items-center justify-center bg-cover bg-center bg-no-repeat" style="background-image: url('../Cupping_therapy_promotional_poster_2K.jpg');">
         <div class="absolute inset-0 bg-teal-900 bg-opacity-75"></div>
         <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
             <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
@@ -164,7 +164,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
         </div>
     </section>
 
-    <!-- قسم مميزاتنا (احتفظت به كما هو لإبراز الجودة) -->
+    
     <section class="py-16 bg-teal-50 border-b border-teal-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -192,7 +192,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
         </div>
     </section>
 
-    <!-- قسم الخدمات العلاجية (مستقل) -->
+    
     <section id="services" class="py-20 bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -239,7 +239,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
     </section>
 
 
-    <!-- قسم الخدمات الرقمية المجانية (مستقل) -->
+    
     <section id="free-services" class="py-20 bg-gray-50 flex-grow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -314,7 +314,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                     <span class="inline-block bg-[#c9a227] text-white font-bold px-4 py-2 rounded-lg group-hover:bg-[#b08d1e]">Scannez un produit →</span>
                 </a>
             </div>
-            <!-- بانر ماسح المنتجات بالكاميرا: الصورة كما هي بلا قص ولا تغطية، والنص على اليسار فقط -->
+            
             <div dir="ltr" class="mt-12 max-w-6xl mx-auto relative rounded-2xl overflow-hidden shadow-md">
                 <img width="1200" height="669" src="../scan-banner.jpg" alt="Scan du code-barres d’un produit par caméra dans un magasin" class="block w-full h-auto">
                 <div dir="ltr" class="p-6 md:p-0 md:absolute md:top-1/2 md:-translate-y-1/2 md:left-[4%] md:w-[38%] md:max-w-[460px] text-right">
@@ -327,18 +327,18 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
         </div>
     </section>
 
-    <!-- قسم الترويج للتطبيق بخلفية مخصصة للبانر -->
+    
     <section class="relative py-20 bg-cover bg-center bg-no-repeat bg-fixed overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=2000');">
-        <!-- طبقة تغطية باللون البرعوني الداكن لجمالية النص -->
+        
         <div class="absolute inset-0 bg-teal-900 bg-opacity-85"></div>
         
-        <!-- دوائر تزيينية -->
+        
         <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-teal-500 opacity-20 blur-3xl z-10"></div>
         <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-teal-400 opacity-20 blur-3xl z-10"></div>
 
         <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
-                <!-- النصوص والزر -->
+                
                 <div class="text-center lg:text-right lg:w-1/2">
                     <span class="inline-block bg-teal-800 text-teal-200 px-4 py-1 rounded-full font-bold text-sm mb-4 border border-teal-600 shadow-sm">
                         🚀 Nouveauté du centre Bayt wikaya
@@ -349,19 +349,19 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                     <p class="text-teal-100 text-lg mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
                         Téléchargez la nouvelle application « Bayt wikaya » et profitez d’une expérience santé complète. Réservez vos rendez-vous, calculez vos calories et vos besoins en eau, et suivez facilement les horaires de la hijama (cupping) prophétique.
                     </p>
-                    <!-- زر الانتقال لصفحة التطبيق -->
+                    
                     <a href="app" class="inline-flex items-center justify-center gap-3 bg-white text-teal-900 hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-lg shadow-2xl transition transform hover:-translate-y-1 hover:scale-105">
                         Découvrez l’application et téléchargez-la maintenant
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </a>
                 </div>
                 
-                <!-- شكل الهاتف التجريدي للترويج -->
+                
                 <div class="lg:w-1/2 flex justify-center">
                      <div class="relative w-64 h-[450px] bg-gray-900 rounded-[2.5rem] border-[8px] border-gray-800 shadow-2xl overflow-hidden transform rotate-3 hover:rotate-0 transition duration-500">
-                        <!-- النوتش الخاص بالهاتف -->
+                        
                         <div class="absolute top-0 w-24 h-5 bg-gray-800 rounded-b-2xl z-20 left-1/2 transform -translate-x-1/2"></div>
-                        <!-- شاشة الهاتف الوهمية -->
+                        
                         <div class="absolute inset-0 bg-teal-50 flex flex-col items-center pt-12 px-4">
                             <img width="800" height="313" src="../baytwikaya-logo.png" alt="Logo de l’application" class="h-12 mb-6">
                             <div class="w-full bg-white p-3 rounded-xl shadow-sm mb-3 border border-teal-100">
@@ -376,7 +376,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                             <div class="w-full bg-white p-3 rounded-xl shadow-sm border border-teal-100 mb-4">
                                 <div class="w-full h-8 bg-gray-100 rounded-lg"></div>
                             </div>
-                            <!-- أزرار وهمية أسفل الشاشة -->
+                            
                             <div class="flex gap-2 w-full mt-auto mb-4">
                                 <div class="w-1/3 h-8 bg-white shadow-sm rounded-lg border border-gray-100"></div>
                                 <div class="w-1/3 h-8 bg-white shadow-sm rounded-lg border border-gray-100"></div>
@@ -389,7 +389,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
         </div>
     </section>
 
-    <!-- الفوتر الشامل -->
+    
     <footer id="contact" class="bg-[#121826] text-white pt-12 w-full mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center mb-10">
@@ -421,7 +421,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                             <a href="mailto:contact@baytwikaya.site" class="text-lg hover:text-teal-300 transition" dir="ltr">contact@baytwikaya.site</a>
                         </li>
                         <li class="flex items-center justify-center md:justify-start">
-                            <a href="https://www.google.com/maps/place/%D8%A8%D9%8A%D8%AA+%D8%A7%D9%84%D9%88%D9%82%D8%A7%D9%8A%D8%A9%E2%80%AD/@33.5612656,-7.5985689,17z/data=!3m1!4b1!4m6!3m5!1s0xda63376bc6640ff:0xd097ecd4ea8057d!8m2!3d33.5612656!4d-7.5985689!16s%2Fg%2F11rkf32518" target="_blank" rel="noopener" class="inline-flex items-center gap-2 primary-bg hover:bg-teal-800 text-white px-5 py-2 rounded-full font-bold text-sm shadow-md transition">📍 Le centre sur la carte</a>
+                            <a href="https://www.google.com/maps/place/%D8%A8%D9%8A%D8%AA+%D8%A7%D9%84%D9%88%D9%82%D8%A7%D9%8A%D8%A9%E2%80%AD/@33.5613106,-7.5984306,17z/data=!3m1!4b1!4m6!3m5!1s0xda63376bc6640ff:0xd097ecd4ea8057d!8m2!3d33.5613106!4d-7.5984306!16s%2Fg%2F11rkf32518!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="inline-flex items-center gap-2 primary-bg hover:bg-teal-800 text-white px-5 py-2 rounded-full font-bold text-sm shadow-md transition">📍 Le centre sur la carte</a>
                         </li>
                         <li class="flex items-center justify-center md:justify-start">
                             <div class="w-10 h-10 bg-teal-800 rounded-full flex items-center justify-center rtl:ml-4 ltr:mr-4 shrink-0">
@@ -447,7 +447,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
         </div>
     </footer>
 
-    <!-- نافذة استمارة الحجز -->
+    
     <div id="bookingModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 hidden opacity-0 transition-opacity duration-300">
         <div class="bg-white rounded-2xl w-11/12 md:w-3/4 lg:w-1/3 p-6 md:p-8 relative transform scale-95 transition-transform duration-300" id="modalContent">
             <button id="closeModal" class="absolute top-4 left-4 text-gray-500 hover:text-red-500" aria-label="Fermer"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
@@ -471,11 +471,11 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
         </div>
     </div>
 
-    <!-- سكربت الجافاسكريبت -->
+    
     <script>
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); mobileMenu.classList.toggle('flex'); });
+        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); mobileMenu.classList.toggle('flex'); const lm=document.getElementById('langMenu'); if(lm){lm.setAttribute('hidden','');} const lb=document.getElementById('langBtn'); if(lb){lb.setAttribute('aria-expanded','false');} });
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); mobileMenu.classList.remove('flex'); }));
 
@@ -501,7 +501,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
             closeModalFunc();
         });
     </script>
-    <!-- PWA: تسجيل عامل الخدمة وزر تثبيت التطبيق -->
+    
     <script>
     (function () {
         'use strict';

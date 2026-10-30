@@ -7,6 +7,10 @@
     <title>تطبيق بيت الوقاية | حمّل التطبيق واحجز موعدك</title>
     <meta name="description" content="حمّل تطبيق بيت الوقاية على هاتفك: احجز مواعيد الحجامة وتقويم العظام، تابع أوقات الحجامة النبوية، واستعمل حاسبات السعرات والماء أينما كنت.">
     <link rel="canonical" href="https://baytwikaya.site/app">
+
+    <link rel="alternate" hreflang="ar" href="https://baytwikaya.github.io/baytwikaya-preview/app.html">
+<link rel="alternate" hreflang="en" href="https://baytwikaya.github.io/baytwikaya-preview/en/app.html">
+<link rel="alternate" hreflang="fr" href="https://baytwikaya.github.io/baytwikaya-preview/fr/app.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="بيت الوقاية">
     <meta property="og:locale" content="ar_MA">
@@ -73,9 +77,11 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                 <div class="hidden md:flex items-center space-x-6 space-x-reverse flex-grow justify-center">
                     <a href="site-index" class="text-gray-700 hover:text-teal-600 font-semibold transition">الرئيسية</a>
                     <a href="site-index#services" class="text-gray-700 hover:text-teal-600 font-semibold transition">الخدمات</a>
+                    <a href="sunnah" class="text-gray-700 hover:text-teal-600 font-semibold transition">أوقات الحجامة</a>
                     <a href="prices" class="text-gray-700 hover:text-teal-600 font-semibold transition">لائحة الأسعار</a>
                     <a href="app" class="text-teal-600 font-bold transition">التطبيق 📱</a>
                     <a href="tools" class="text-gray-700 hover:text-teal-600 font-semibold transition">الأدوات</a>
+                                    <a href="news" class="inline-flex items-center gap-1 text-amber-600 hover:text-amber-700 font-bold transition"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6"></path></svg>الأخبار</a>
                                     <a href="centers" class="nav-neon text-gray-700 hover:text-teal-600 font-semibold transition">🏢 أصحاب المراكز</a>
                 </div>
                 <div class="hidden md:block flex-shrink-0">
@@ -86,15 +92,17 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-2xl absolute w-full left-0 border-t border-teal-100 flex-col py-4 px-6 space-y-4 z-50">
             <a href="site-index" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">الرئيسية</a>
             <a href="site-index#services" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">الخدمات</a>
+            <a href="sunnah" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">أوقات الحجامة</a>
             <a href="prices" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">لائحة الأسعار</a>
             <a href="app" class="block text-teal-600 font-bold text-lg border-b border-gray-100 pb-2">التطبيق 📱</a>
             <a href="tools" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">الأدوات</a>
+                        <a href="news" class="flex items-center gap-2 text-amber-600 font-bold text-lg border-b border-gray-100 pb-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6"></path></svg>الأخبار</a>
                         <a href="centers" class="nav-neon block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">🏢 أصحاب المراكز</a>
             <button class="open-modal-btn w-full primary-bg hover:bg-teal-800 text-white px-6 py-3 rounded-xl font-bold shadow-md transition mt-2">إحجز موعدك الآن</button>
         </div>
     </nav>
 <script>
-(function(){var b=document.getElementById('langBtn'),m=document.getElementById('langMenu');if(!b||!m)return;b.addEventListener('click',function(e){e.stopPropagation();var o=m.hasAttribute('hidden');if(o){m.removeAttribute('hidden');b.setAttribute('aria-expanded','true');}else{m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('click',function(e){if(!m.hasAttribute('hidden')&&!b.contains(e.target)&&!m.contains(e.target)){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hasAttribute('hidden')){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});})();
+(function(){var b=document.getElementById('langBtn'),m=document.getElementById('langMenu');if(!b||!m)return;b.addEventListener('click',function(e){e.stopPropagation();var o=m.hasAttribute('hidden');if(o){m.removeAttribute('hidden');b.setAttribute('aria-expanded','true');var mm=document.getElementById('mobile-menu');if(mm){mm.classList.add('hidden');mm.classList.remove('flex');}}else{m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('click',function(e){if(!m.hasAttribute('hidden')&&!b.contains(e.target)&&!m.contains(e.target)){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hasAttribute('hidden')){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});})();
 </script>
 
     <!-- قسم الهيرو (تحميل التطبيق) -->
@@ -118,7 +126,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                 <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start items-center">
                     
                     <!-- زر تحميل APK -->
-                    <a href="bayt-wikaya-v2.1.4.apk" download class="animate-pulse-soft bg-[#3DDC84] hover:bg-green-500 text-gray-900 border-2 border-green-600 px-6 py-3 rounded-2xl font-bold shadow-xl transition transform hover:-translate-y-1 flex items-center gap-3 w-full sm:w-auto group">
+                    <a href="bayt-wikaya-v2.1.5.apk" download class="animate-pulse-soft bg-[#3DDC84] hover:bg-green-500 text-gray-900 border-2 border-green-600 px-6 py-3 rounded-2xl font-bold shadow-xl transition transform hover:-translate-y-1 flex items-center gap-3 w-full sm:w-auto group">
     <svg class="w-8 h-8 text-green-900 group-hover:scale-110 transition" fill="currentColor" viewBox="0 0 24 24"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997zm-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997zm11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.244 13.8533 7.8512 12 7.8512c-1.8533 0-3.5902.3928-5.1367 1.0998L4.841 5.4482a.416.416 0 00-.5676-.1521.416.416 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396z"/></svg>
     <div class="text-right">
         <div class="text-[12px] font-semibold opacity-90">تحميل النسخة التجريبية</div>
@@ -266,7 +274,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                         <li class="flex items-center justify-center gap-3"><span class="text-base text-gray-200">الفداء، القريعة، زنقة 57، رقم 46 (خلف صيدلية العنبر)، الدار البيضاء</span></li>
                         <li class="flex items-center justify-center gap-3"><a href="mailto:contact@baytwikaya.site" class="text-base text-gray-200 hover:text-teal-300 transition" dir="ltr">✉️ contact@baytwikaya.site</a></li>
                         <li class="flex items-center justify-center gap-3">
-                            <a href="https://www.google.com/maps/place/%D8%A8%D9%8A%D8%AA+%D8%A7%D9%84%D9%88%D9%82%D8%A7%D9%8A%D8%A9%E2%80%AD/@33.5612656,-7.5985689,17z/data=!3m1!4b1!4m6!3m5!1s0xda63376bc6640ff:0xd097ecd4ea8057d!8m2!3d33.5612656!4d-7.5985689!16s%2Fg%2F11rkf32518" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-600 text-white px-5 py-2 rounded-full font-bold text-sm shadow-md transition">📍 موقع المركز على الخريطة</a>
+                            <a href="https://www.google.com/maps/place/%D8%A8%D9%8A%D8%AA+%D8%A7%D9%84%D9%88%D9%82%D8%A7%D9%8A%D8%A9%E2%80%AD/@33.5613106,-7.5984306,17z/data=!3m1!4b1!4m6!3m5!1s0xda63376bc6640ff:0xd097ecd4ea8057d!8m2!3d33.5613106!4d-7.5984306!16s%2Fg%2F11rkf32518!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-600 text-white px-5 py-2 rounded-full font-bold text-sm shadow-md transition">📍 موقع المركز على الخريطة</a>
                         </li>
                         <li class="flex items-center justify-center gap-3">
                             <span class="text-sm text-gray-300 leading-relaxed">🕗 كل أيام الأسبوع: 8:30 صباحاً – 4:30 مساءً<br>الجمعة: 8:30 – 11:30 صباحاً</span>
@@ -317,7 +325,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
     <script>
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); mobileMenu.classList.toggle('flex'); });
+        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); mobileMenu.classList.toggle('flex'); const lm=document.getElementById('langMenu'); if(lm){lm.setAttribute('hidden','');} const lb=document.getElementById('langBtn'); if(lb){lb.setAttribute('aria-expanded','false');} });
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); mobileMenu.classList.remove('flex'); }));
 

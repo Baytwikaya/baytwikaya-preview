@@ -75,13 +75,14 @@ h2.section{font-size:1.6rem;margin:32px 0 4px}
 .foot{border-top:1px solid var(--line);padding:20px 0 40px;color:#8A948C;font-size:.85rem;text-align:center}
 @media(max-width:720px){.features,.strip{grid-template-columns:1fr}.hero h1{font-size:2.1rem}.app-icon{width:52px;height:52px}}
 <style>
-/* رابط أصحاب المراكز - خط نيون تحت الرابط */
+
 nav a.nav-neon,div#mobile-menu a.nav-neon{position:relative;padding-bottom:6px}
 nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:absolute;right:0;bottom:0;height:3px;width:100%;border-radius:999px;background:linear-gradient(90deg,#10b981,#34d399);box-shadow:0 0 8px rgba(16,185,129,.9),0 0 18px rgba(16,185,129,.5);animation:neonLine 3s ease-in-out infinite}
 @keyframes neonLine{0%,100%{opacity:1;box-shadow:0 0 8px rgba(16,185,129,.9),0 0 18px rgba(16,185,129,.5)}50%{opacity:.25;box-shadow:0 0 2px rgba(16,185,129,.4),0 0 6px rgba(16,185,129,.2)}}
 @media (prefers-reduced-motion: reduce){nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{animation:none}}
 </style>
 </style>
+<link rel="canonical" href="https://baytwikaya.site/fr/centers">
 </head>
 <body>
 
@@ -123,7 +124,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
         </div>
     </nav>
 <script>
-(function(){var b=document.getElementById('langBtn'),m=document.getElementById('langMenu');if(!b||!m)return;b.addEventListener('click',function(e){e.stopPropagation();var o=m.hasAttribute('hidden');if(o){m.removeAttribute('hidden');b.setAttribute('aria-expanded','true');}else{m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('click',function(e){if(!m.hasAttribute('hidden')&&!b.contains(e.target)&&!m.contains(e.target)){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hasAttribute('hidden')){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});})();
+(function(){var b=document.getElementById('langBtn'),m=document.getElementById('langMenu');if(!b||!m)return;b.addEventListener('click',function(e){e.stopPropagation();var o=m.hasAttribute('hidden');if(o){m.removeAttribute('hidden');b.setAttribute('aria-expanded','true');var mm=document.getElementById('mobile-menu');if(mm){mm.classList.add('hidden');mm.classList.remove('flex');}}else{m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('click',function(e){if(!m.hasAttribute('hidden')&&!b.contains(e.target)&&!m.contains(e.target)){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hasAttribute('hidden')){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});})();
 </script>
 <main class="wrap">
 
@@ -305,7 +306,7 @@ document.querySelectorAll('[data-wa]').forEach(function (btn) {
 var btn = document.getElementById('mobile-menu-btn');
 var menu = document.getElementById('mobile-menu');
 if (btn && menu) {
-  btn.addEventListener('click', function () { menu.classList.toggle('hidden'); menu.classList.toggle('flex'); });
+  btn.addEventListener('click', function () { menu.classList.toggle('hidden'); menu.classList.toggle('flex'); var lm=document.getElementById('langMenu'); if(lm){lm.setAttribute('hidden','');} var lb=document.getElementById('langBtn'); if(lb){lb.setAttribute('aria-expanded','false');} });
   menu.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', function () { menu.classList.add('hidden'); menu.classList.remove('flex'); });
   });

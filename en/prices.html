@@ -94,7 +94,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
         </div>
     </nav>
 <script>
-(function(){var b=document.getElementById('langBtn'),m=document.getElementById('langMenu');if(!b||!m)return;b.addEventListener('click',function(e){e.stopPropagation();var o=m.hasAttribute('hidden');if(o){m.removeAttribute('hidden');b.setAttribute('aria-expanded','true');}else{m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('click',function(e){if(!m.hasAttribute('hidden')&&!b.contains(e.target)&&!m.contains(e.target)){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hasAttribute('hidden')){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});})();
+(function(){var b=document.getElementById('langBtn'),m=document.getElementById('langMenu');if(!b||!m)return;b.addEventListener('click',function(e){e.stopPropagation();var o=m.hasAttribute('hidden');if(o){m.removeAttribute('hidden');b.setAttribute('aria-expanded','true');var mm=document.getElementById('mobile-menu');if(mm){mm.classList.add('hidden');mm.classList.remove('flex');}}else{m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('click',function(e){if(!m.hasAttribute('hidden')&&!b.contains(e.target)&&!m.contains(e.target)){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hasAttribute('hidden')){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});})();
 </script>
 
     <!-- Page content -->
@@ -186,7 +186,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                             <a href="mailto:contact@baytwikaya.site" class="text-lg hover:text-teal-300 transition" dir="ltr">contact@baytwikaya.site</a>
                         </li>
                         <li class="flex items-center justify-center md:justify-start">
-                            <a href="https://www.google.com/maps/place/%D8%A8%D9%8A%D8%AA+%D8%A7%D9%84%D9%88%D9%82%D8%A7%D9%8A%D8%A9%E2%80%AD/@33.5612656,-7.5985689,17z/data=!3m1!4b1!4m6!3m5!1s0xda63376bc6640ff:0xd097ecd4ea8057d!8m2!3d33.5612656!4d-7.5985689!16s%2Fg%2F11rkf32518" target="_blank" rel="noopener" class="inline-flex items-center gap-2 primary-bg hover:bg-teal-800 text-white px-5 py-2 rounded-full font-bold text-sm shadow-md transition">📍 The center's location on the map</a>
+                            <a href="https://www.google.com/maps/place/%D8%A8%D9%8A%D8%AA+%D8%A7%D9%84%D9%88%D9%82%D8%A7%D9%8A%D8%A9%E2%80%AD/@33.5613106,-7.5984306,17z/data=!3m1!4b1!4m6!3m5!1s0xda63376bc6640ff:0xd097ecd4ea8057d!8m2!3d33.5613106!4d-7.5984306!16s%2Fg%2F11rkf32518!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="inline-flex items-center gap-2 primary-bg hover:bg-teal-800 text-white px-5 py-2 rounded-full font-bold text-sm shadow-md transition">📍 The center's location on the map</a>
                         </li>
                         <li class="flex items-center justify-center md:justify-start">
                             <div class="w-10 h-10 bg-teal-800 rounded-full flex items-center justify-center rtl:ml-4 ltr:mr-4 shrink-0">
@@ -245,6 +245,7 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
             mobileMenuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
                 mobileMenu.classList.toggle('flex');
+                const lm=document.getElementById('langMenu'); if(lm){lm.setAttribute('hidden','');} const lb=document.getElementById('langBtn'); if(lb){lb.setAttribute('aria-expanded','false');}
             });
 
             const mobileLinks = mobileMenu.querySelectorAll('a');
