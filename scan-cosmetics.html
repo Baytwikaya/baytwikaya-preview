@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>بشرتي | بيت الوقاية</title>
+    <meta name="description" content="وجّه كاميرا هاتفك إلى باركود أي منتج تجميلي واحصل فوراً على نقاطه من 0 إلى 100 ومخاطر مكوناته، من قاعدة بيانات Open Beauty Facts المفتوحة.">
+    <link rel="canonical" href="https://baytwikaya.site/scan-cosmetics">
+    <link rel="alternate" hreflang="ar" href="https://baytwikaya.github.io/baytwikaya-preview/scan-cosmetics">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="بيت الوقاية">
+    <meta property="og:locale" content="ar_MA">
+    <meta property="og:title" content="بشرتي | بيت الوقاية">
+    <meta property="og:description" content="وجّه كاميرا هاتفك إلى باركود أي منتج تجميلي واحصل فوراً على نقاطه من 0 إلى 100 ومخاطر مكوناته، من قاعدة بيانات Open Beauty Facts المفتوحة.">
+    <meta property="og:url" content="https://baytwikaya.site/scan-cosmetics">
+    <meta property="og:image" content="https://baytwikaya.site/service-hijama.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="بشرتي | بيت الوقاية">
+    <meta name="twitter:description" content="وجّه كاميرا هاتفك إلى باركود أي منتج تجميلي واحصل فوراً على نقاطه من 0 إلى 100 ومخاطر مكوناته، من قاعدة بيانات Open Beauty Facts المفتوحة.">
+    <meta name="twitter:image" content="https://baytwikaya.site/service-hijama.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Tajawal', sans-serif; background-color: #f8fafc; }
+        .primary-color { color: #0f766e; }
+        .primary-bg { background-color: #0f766e; }
+        .sehti-logo { display: inline-block; width: 46px; height: 46px; vertical-align: -11px; border-radius: 12px; }
+        .score-pill { min-width: 64px; height: 38px; padding: 0 8px; border-radius: 11px; display: grid; place-items: center; font-weight: 800; font-size: .95rem; flex: none; color: #fff; }
+        /* بطاقة نتيجة مسح التجميل (النقاط 0–100 + مخاطر المكونات) */
+        .cos-card { background: #fff; border: 1px solid #ccfbf1; border-radius: 20px; box-shadow: 0 6px 18px rgba(15,118,110,.08); overflow: hidden; margin-top: 14px; }
+        .cos-verdict { padding: 12px 18px; font-weight: 800; text-align: center; color: #fff; font-size: 1.05rem; }
+        .cos-verdict.good { background: #1E8A46; }
+        .cos-verdict.mid { background: #B7791F; }
+        .cos-verdict.bad { background: #C0392B; }
+        .cos-verdict.none { background: #5B6B62; }
+        .cos-head { display: flex; gap: 14px; padding: 18px; align-items: center; }
+        .cos-head img { width: 84px; height: 84px; object-fit: contain; border: 1px solid #e5e7eb; border-radius: 14px; background: #fff; flex: none; }
+        .cos-head .nm { font-weight: 800; font-size: 1.15rem; line-height: 1.4; color: #134e4a; }
+        .cos-head .br { color: #6b7280; font-size: .92rem; }
+        .cos-head .qt { color: #6b7280; font-size: .92rem; font-weight: 700; }
+        .cos-head .bc { color: #9ca3af; font-size: .85rem; }
+        .cos-head .hint { color: #9ca3af; font-size: .85rem; }
+        .cos-card .lbl { font-size: .8rem; font-weight: 800; letter-spacing: .04em; color: #6b7280; }
+        .cos-score { display: flex; gap: 16px; align-items: center; padding: 16px 18px; border-top: 1px solid #f0fdfa; }
+        .cos-num { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 1.6rem; color: #fff; flex: none; box-shadow: 0 4px 12px rgba(15,118,110,.25); }
+        .cos-num.na { background: #9ca3af; font-size: 1.1rem; }
+        .cos-score .txt { font-weight: 800; font-size: 1.15rem; line-height: 1.4; color: #134e4a; }
+        .cos-score .sub { color: #6b7280; font-size: .9rem; font-weight: 600; }
+        .cos-bar { height: 12px; border-radius: 999px; margin: 0 18px 16px; background: linear-gradient(90deg, #E63E11 0%, #EE8100 25%, #FECB02 50%, #85BB2F 75%, #038141 100%); position: relative; }
+        .cos-bar i { position: absolute; top: 50%; width: 20px; height: 20px; border-radius: 50%; background: #fff; border: 3px solid #134e4a; transform: translate(-50%, -50%); box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+        .cos-ing-h { padding: 12px 18px 0; border-top: 1px solid #f0fdfa; font-size: .85rem; color: #6b7280; font-weight: 700; }
+        .cos-ing { padding: 6px 18px 14px; }
+        .cos-ing-row { display: flex; gap: 10px; padding: 8px 0; border-top: 1px dashed #ccfbf1; align-items: flex-start; }
+        .cos-ing-row:first-child { border-top: none; }
+        .cos-dot { width: 12px; height: 12px; border-radius: 50%; flex: none; margin-top: 5px; }
+        .cos-ing-row .in { font-weight: 700; color: #1f2937; }
+        .cos-ing-row .rl { font-size: .82rem; font-weight: 800; }
+        .cos-ing-row .why { color: #6b7280; font-size: .88rem; line-height: 1.5; }
+        .cos-ing-row.unknown .in { color: #6b7280; font-weight: 600; }
+        .cos-allerg { padding: 12px 18px; border-top: 1px solid #f0fdfa; font-size: .92rem; color: #6b7280; }
+        .cos-allerg b { color: #1f2937; }
+        .cos-pill { display: inline-grid; place-items: center; min-width: 34px; height: 26px; padding: 0 6px; border-radius: 8px; color: #fff; font-weight: 800; font-size: .95rem; }
+        .cos-pill.na { background: #e5e7eb; color: #6b7280; }
+    </style>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#0f766e">
+    <link rel="apple-touch-icon" href="icon-192.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7VGSVX46W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Z7VGSVX46W');
+</script>
+<style>
+/* رابط أصحاب المراكز - خط نيون تحت الرابط */
+nav a.nav-neon,div#mobile-menu a.nav-neon{position:relative;padding-bottom:6px}
+nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:absolute;right:0;bottom:0;height:3px;width:100%;border-radius:999px;background:linear-gradient(90deg,#10b981,#34d399);box-shadow:0 0 8px rgba(16,185,129,.9),0 0 18px rgba(16,185,129,.5);animation:neonLine 3s ease-in-out infinite}
+@keyframes neonLine{0%,100%{opacity:1;box-shadow:0 0 8px rgba(16,185,129,.9),0 0 18px rgba(16,185,129,.5)}50%{opacity:.25;box-shadow:0 0 2px rgba(16,185,129,.4),0 0 6px rgba(16,185,129,.2)}}
+@media (prefers-reduced-motion: reduce){nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{animation:none}}
+</style>
+</head>
+<body class="text-gray-800 antialiased flex flex-col min-h-screen relative">
+
+    <!-- شريط التنقل المتطابق والداعم للهواتف -->
+<!-- شريط التنقل الموحد -->
+    <nav class="bg-white shadow-md fixed w-full z-40 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="site-index">
+                        <img src="baytwikaya-logo.png" alt="شعار بيت الوقاية" class="h-14 w-auto object-contain">
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-teal-700 hover:text-teal-900 focus:outline-none p-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+                <div class="hidden md:flex items-center space-x-6 space-x-reverse flex-grow justify-center">
+                    <a href="site-index" class="text-gray-700 hover:text-teal-600 font-semibold transition">الرئيسية</a>
+                    <a href="site-index#services" class="text-gray-700 hover:text-teal-600 font-semibold transition">الخدمات</a>
+                    <a href="sunnah" class="text-teal-600 font-bold transition">أوقات الحجامة</a>
+                    <a href="prices" class="text-gray-700 hover:text-teal-600 font-semibold transition">لائحة الأسعار</a>
+                    <a href="app" class="text-gray-700 hover:text-teal-600 font-semibold transition">التطبيق 📱</a>
+                    <a href="tools" class="text-teal-600 font-bold transition">الأدوات</a>
+                    <a href="news" class="inline-flex items-center gap-1 text-amber-600 hover:text-amber-700 font-bold transition"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6"></path></svg>الأخبار</a>
+                                    <a href="centers" class="nav-neon text-gray-700 hover:text-teal-600 font-semibold transition">🏢 أصحاب المراكز</a>
+                </div>
+                <div class="hidden md:block flex-shrink-0">
+                    <button class="open-modal-btn primary-bg hover:bg-teal-800 text-white px-6 py-2 rounded-full font-bold shadow-md transition transform hover:scale-105">إحجز موعدك</button>
+                </div>
+            <div class="relative flex-shrink-0"><button type="button" id="langBtn" class="flex items-center gap-1.5 text-teal-700 hover:text-teal-900 font-semibold px-2 py-1 rounded-lg hover:bg-teal-50 focus:outline-none" aria-haspopup="true" aria-expanded="false" aria-label="Language"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg><span>AR</span><span aria-hidden="true">⌄</span></button><div id="langMenu" hidden class="absolute left-0 top-full mt-2 w-52 bg-white rounded-lg shadow-xl border border-gray-100 py-1 z-50"><a href="scan-cosmetics" aria-current="true" class="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-700 font-semibold font-bold text-teal-700"><img src="assets/flags/ma.png" alt="" style="width:22px;height:16px;object-fit:cover;border-radius:3px;flex-shrink:0"><span>AR</span><span>العربية</span><span class="ml-auto" aria-hidden="true">✓</span></a></div></div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-2xl absolute w-full left-0 border-t border-teal-100 flex-col py-4 px-6 space-y-4 z-50">
+            <a href="site-index" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">الرئيسية</a>
+            <a href="site-index#services" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">الخدمات</a>
+                    <a href="sunnah" class="block text-teal-600 font-bold text-lg border-b border-gray-100 pb-2">أوقات الحجامة</a>
+            <a href="prices" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">لائحة الأسعار</a>
+            <a href="app" class="block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">التطبيق 📱</a>
+            <a href="tools" class="block text-teal-600 font-bold text-lg border-b border-gray-100 pb-2">الأدوات</a>
+                    <a href="news" class="flex items-center gap-2 text-amber-600 font-bold text-lg border-b border-gray-100 pb-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6"></path></svg>الأخبار</a>
+                        <a href="centers" class="nav-neon block text-gray-700 font-semibold text-lg border-b border-gray-100 pb-2">🏢 أصحاب المراكز</a>
+            <button class="open-modal-btn w-full primary-bg hover:bg-teal-800 text-white px-6 py-3 rounded-xl font-bold shadow-md transition mt-2">إحجز موعدك الآن</button>
+        </div>
+    </nav>
+    <script>
+(function(){var b=document.getElementById('langBtn'),m=document.getElementById('langMenu');if(!b||!m)return;b.addEventListener('click',function(e){e.stopPropagation();var o=m.hasAttribute('hidden');if(o){m.removeAttribute('hidden');b.setAttribute('aria-expanded','true');var mm=document.getElementById('mobile-menu');if(mm){mm.classList.add('hidden');mm.classList.remove('flex');}}else{m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('click',function(e){if(!m.hasAttribute('hidden')&&!b.contains(e.target)&&!m.contains(e.target)){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hasAttribute('hidden')){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});})();
+</script>
+
+    <!-- محتوى صفحة الماسح -->
+    <main class="flex-grow pt-28 pb-16 px-4 w-full">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-10">
+                <h1 class="text-3xl md:text-5xl font-bold text-teal-900 mb-4"><img src="assets/bsharati-logo.svg" alt="بشرتي" class="sehti-logo"> بشرتي</h1>
+                <p class="text-gray-600 text-lg">بشرتك في جيبك — وجّه كاميرا هاتفك إلى باركود أي منتج تجميلي، واحصل فوراً على نقاطه من 0 إلى 100 ومخاطر مكوناته.</p>
+            </div>
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border-t-8 border-[#c9a227]">
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">📷 مسح بالكاميرا</h3>
+                        <p class="text-gray-600 mb-4">قرّب الباركود من الكاميرا — يجب أن يكون الموقع مفتوحاً من الهاتف عبر HTTPS (وهو كذلك).</p>
+                        <button type="button" class="bg-[#c9a227] hover:bg-[#b08d1e] text-white font-bold px-8 py-4 rounded-full shadow-lg transition text-lg" onclick="startScan()">📷 افتح الكاميرا وامسح الباركود</button>
+                        <div id="scanner" style="display:none;margin-top:14px">
+                            <div id="scan-box" style="border-radius:16px;overflow:hidden;background:#000"></div>
+                            <button type="button" class="bg-red-700 hover:bg-red-600 text-white font-bold px-6 py-3 rounded-lg shadow-md transition mt-3" onclick="stopScan()">إيقاف الكاميرا</button>
+                        </div>
+                    </div>
+                    <div class="pt-6 border-t-2 border-dashed border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">أو اكتب اسم المنتج أو رقم الباركود</h3>
+                        <div class="flex gap-3 flex-wrap">
+                            <input class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-left flex-1" style="min-width:200px" id="cos-q" type="text" inputmode="search" placeholder="اسم منتج تجميلي أو رقم باركود (مثال: 8001090742322)">
+                            <button type="button" class="primary-bg hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-lg shadow-md transition" onclick="searchOBF()">ابحث</button>
+                        </div>
+                    </div>
+                    <div id="cos-out" style="margin-top:14px"></div>
+                    <p class="text-gray-500 text-sm">البيانات من قاعدة Open Beauty Facts العالمية المفتوحة — بيانات مساهمة جماعية وقد تكون غير كاملة؛ راجع التغليف الأصلي دائماً.</p>
+                </div>
+            </div>
+            <div id="score-explainer" class="bg-white rounded-3xl shadow-xl p-8 md:p-10 mt-8">
+                <h2 class="text-2xl font-bold text-teal-900 mb-2">ما هي نقاط «بشرتي»؟</h2>
+                <p class="text-gray-600 mb-6">نقيّم كل منتج تجميلي من 0 إلى 100 حسب مخاطر مكوناته: كل مكوّن له لون حسب خطره — أحمر (خطر عالٍ)، برتقالي (خطر متوسط)، أصفر (خطر منخفض)، أخضر (آمن).</p>
+                <div class="space-y-4">
+                    <div class="flex gap-3 items-center"><span class="score-pill" style="background:#1E8A46">75–100</span><div><b class="text-teal-900">ممتاز</b><span class="block text-gray-600 text-sm">الخيار الأفضل — مكوناته آمنة</span></div></div>
+                    <div class="flex gap-3 items-center"><span class="score-pill" style="background:#85BB2F">50–75</span><div><b class="text-teal-900">جيد</b><span class="block text-gray-600 text-sm">خيار جيد — مخاطر منخفضة فقط</span></div></div>
+                    <div class="flex gap-3 items-center"><span class="score-pill" style="background:#EE8100">25–50</span><div><b class="text-teal-900">ضعيف</b><span class="block text-gray-600 text-sm">فيه مكونات متوسطة الخطر — الأفضل أن تقلل منه</span></div></div>
+                    <div class="flex gap-3 items-center"><span class="score-pill" style="background:#E63E11">0–25</span><div><b class="text-teal-900">سيئ</b><span class="block text-gray-600 text-sm">فيه مكونات عالية الخطر — الأفضل تجنّبه</span></div></div>
+                </div>
+                <h3 class="text-lg font-bold text-teal-900 mt-8 mb-2">كيف تُحسب النقاط؟</h3>
+                <p class="text-gray-600 mb-4">نبدأ من 100، وأسوأ مكوّن يحدد السقف: مكوّن عالي الخطر ينزل النقاط تحت 25، ومكوّن متوسط الخطر ينزلها تحت 50، ومكوّن منخفض الخطر ينزلها تحت 75. والمكوّن غير الموجود في جدولنا لا يُحسب — نكتب «لا توجد بيانات» ولا نفترض أنه آمن.</p>
+                <div class="bg-amber-50 border border-amber-300 rounded-xl p-4 mt-4"><p class="text-amber-900 font-bold">⚠ تنبيه مهم</p><p class="text-amber-800">النقاط مؤشر فرز حسب الخطر، وليست حكماً على السلامة — ولا تأخذ الكمية بعين الاعتبار. الخطر هنا خطر المكوّن بحد ذاته، وليس خطر المنتج بالجرعة المستعملة.</p></div>
+                <p class="text-gray-500 text-sm mt-6">جدول المخاطر مبني على: لائحة مستحضرات التجميل الأوروبية (EC) رقم 1223/2009 وملاحقها، وآراء لجنة السلامة العلمية SCCS، وتصنيفات ECHA وIARC وCIR. قاعدة المنتجات: Open Beauty Facts المفتوحة.</p>
+            </div>
+            <div class="text-center mt-8 space-y-2">
+                <a href="tools" class="inline-block text-teal-700 font-bold hover:underline">← جميع الأدوات المجانية</a>
+                <span class="text-gray-300 mx-2">|</span>
+                <a href="site-index" class="inline-block text-teal-700 font-bold hover:underline">العودة للرئيسية</a>
+            </div>
+            <p class="text-center text-gray-400 text-sm mt-6">بشراكة مع محرز زهير — <a href="https://www.mahrezzouhair.com" target="_blank" rel="noopener" class="text-teal-700 hover:underline" dir="ltr">www.mahrezzouhair.com</a></p>
+        </div>
+    </main>
+
+   <!-- الفوتر الشامل -->
+    <footer id="contact" class="bg-[#121826] text-white pt-12 w-full mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center mb-10">
+                <div class="flex flex-col items-center lg:items-start text-center lg:text-right">
+                    <div class="bg-white px-6 py-2 rounded-lg mb-4 inline-block shadow-md">
+                        <img src="baytwikaya-logo.png" alt="شعار بيت الوقاية" class="h-14 w-auto object-contain">
+                    </div>
+                    <p class="text-gray-400 leading-relaxed text-sm lg:w-11/12">مركز بيت الوقاية يقدم لكم أحدث التقنيات وأفضل الممارسات في مجال الحجامة وتقويم العظام.</p>
+                </div>
+                <div class="flex flex-col items-center md:items-start">
+                    <h3 class="text-2xl font-bold text-teal-400 mb-6">تواصل معنا</h3>
+                    <ul class="space-y-4 w-full">
+                        <li class="flex items-center justify-center md:justify-start">
+                            <div class="w-10 h-10 bg-teal-800 rounded-full flex items-center justify-center rtl:ml-4 ltr:mr-4">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <span class="text-xl font-bold" dir="ltr">06 64 651 301</span>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start">
+                            <div class="w-10 h-10 bg-teal-800 rounded-full flex items-center justify-center rtl:ml-4 ltr:mr-4">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <span class="text-lg">الفداء، القريعة، زنقة 57، رقم 46 (خلف صيدلية العنبر)، الدار البيضاء</span>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start">
+                            <div class="w-10 h-10 bg-teal-800 rounded-full flex items-center justify-center rtl:ml-4 ltr:mr-4">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <a href="mailto:contact@baytwikaya.site" class="text-lg hover:text-teal-300 transition" dir="ltr">contact@baytwikaya.site</a>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start">
+                            <a href="https://www.google.com/maps/place/%D8%A8%D9%8A%D8%AA+%D8%A7%D9%84%D9%88%D9%82%D8%A7%D9%8A%D8%A9%E2%80%AD/@33.5613106,-7.5984306,17z/data=!3m1!4b1!4m6!3m5!1s0xda63376bc6640ff:0xd097ecd4ea8057d!8m2!3d33.5613106!4d-7.5984306!16s%2Fg%2F11rkf32518!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="inline-flex items-center gap-2 primary-bg hover:bg-teal-800 text-white px-5 py-2 rounded-full font-bold text-sm shadow-md transition">📍 موقع المركز على الخريطة</a>
+                        </li>
+                        <li class="flex items-center justify-center md:justify-start">
+                            <div class="w-10 h-10 bg-teal-800 rounded-full flex items-center justify-center rtl:ml-4 ltr:mr-4 shrink-0">
+                                <span class="text-lg">🕗</span>
+                            </div>
+                            <span class="text-base leading-relaxed">كل أيام الأسبوع: 8:30 صباحاً – 4:30 مساءً<br>الجمعة: 8:30 – 11:30 صباحاً</span>
+                        </li>
+                    </ul>
+                    <div class="flex items-center justify-center md:justify-start gap-3 mt-4">
+                        <a href="https://www.instagram.com/baytwikaya" target="_blank" rel="noopener" aria-label="صفحة بيت الوقاية على إنستغرام" class="w-10 h-10 bg-teal-800 hover:bg-teal-600 rounded-full flex items-center justify-center transition"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                        <a href="https://wa.me/212664651301" target="_blank" rel="noopener" aria-label="تواصل معنا عبر واتساب" class="w-10 h-10 bg-teal-800 hover:bg-[#25D366] rounded-full flex items-center justify-center transition"><svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+                        <button id="pwa-install-btn" type="button" style="display:none" class="hidden items-center gap-2 bg-teal-600 hover:bg-teal-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-md transition">📲 ثبّت التطبيق</button>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center lg:items-end w-full">
+                    <div class="bg-[#1f2937] p-6 rounded-xl shadow-lg border border-gray-700 text-center w-full max-w-sm">
+                        <h3 class="text-lg font-bold text-white mb-6">هل أنت مستعد للتخلص من الألم؟</h3>
+                        <a href="https://wa.me/212664651301" target="_blank" class="w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-green-600 text-white py-3 px-4 rounded-lg font-bold transition shadow-md">تواصل معنا عبر واتساب</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 py-6 text-center text-gray-500 text-sm">© 2026 مركز بيت الوقاية. جميع الحقوق محفوظة.</div>
+        </div>
+    </footer>
+
+    <!-- نافذة استمارة الحجز -->
+    <div id="bookingModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-2xl w-11/12 md:w-3/4 lg:w-1/3 p-6 md:p-8 relative transform scale-95 transition-transform duration-300" id="modalContent">
+            <button id="closeModal" class="absolute top-4 left-4 text-gray-500 hover:text-red-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+            <div class="text-center mb-6"><h3 class="text-2xl font-bold text-teal-800">طلب حجز موعد</h3></div>
+            <form name="booking_form" class="space-y-4">
+                
+                <div><label class="block mb-2">الاسم الكامل</label><input type="text" name="name" required class="w-full px-4 py-2 border rounded-lg"></div>
+                <div><label class="block mb-2">رقم الهاتف</label><input type="tel" name="phone" required dir="ltr" class="w-full px-4 py-2 border rounded-lg text-right"></div>
+                <div>
+                    <label class="block mb-2">الخدمة المطلوبة</label>
+                    <select name="service" required class="w-full px-4 py-2 border rounded-lg">
+                        <option value="" disabled selected>اختر الخدمة...</option>
+                        <option value="الحجامة">الحجامة الطبية والنبوية</option>
+                        <option value="تقويم العظام">تقويم العظام والمفاصل</option>
+                        <option value="المساج العلاجي">المساج العلاجي</option>
+                        <option value="الوخز بالإبر الصينية">الوخز بالإبر الصينية</option>
+                    </select>
+                </div>
+                <div><label class="block mb-2">تاريخ الموعد المفضل</label><input type="date" name="date" class="w-full px-4 py-2 border rounded-lg"></div>
+                <div class="pt-2"><button type="submit" class="w-full primary-bg hover:bg-teal-800 text-white font-bold py-3 px-4 rounded-lg">تأكيد طلب الحجز</button></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- سكربت الجافاسكريبت -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+                const lm=document.getElementById('langMenu'); if(lm){lm.setAttribute('hidden','');} const lb=document.getElementById('langBtn'); if(lb){lb.setAttribute('aria-expanded','false');}
+            });
+
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                });
+            });
+
+            const modal = document.getElementById('bookingModal');
+            const modalContent = document.getElementById('modalContent');
+            const openBtns = document.querySelectorAll('.open-modal-btn');
+            const closeModal = document.getElementById('closeModal');
+            
+            const openModalFunc = (e) => { 
+                e.preventDefault(); 
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                modal.classList.remove('hidden'); 
+                setTimeout(() => { modal.classList.remove('opacity-0'); modalContent.classList.remove('scale-95'); }, 10); 
+            };
+            const closeModalFunc = () => { 
+                modal.classList.add('opacity-0'); 
+                modalContent.classList.add('scale-95'); 
+                setTimeout(() => { modal.classList.add('hidden'); }, 300); 
+            };
+            
+            openBtns.forEach(btn => btn.addEventListener('click', openModalFunc));
+            closeModal.addEventListener('click', closeModalFunc);
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeModalFunc(); });
+
+            const form = document.forms['booking_form'];
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                const fd = new FormData(form);
+                const lines = ['السلام عليكم، أريد حجز موعد في بيت الوقاية', 'الاسم: ' + (fd.get('name') || ''), 'الهاتف: ' + (fd.get('phone') || ''), 'الخدمة: ' + (fd.get('service') || '')];
+                const d = fd.get('date');
+                if (d) { lines.push('التاريخ المفضل: ' + d); }
+                window.open('https://wa.me/212664651301?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+                form.reset();
+                closeModalFunc();
+            });
+
+// ── «بشرتي» — جدول مخاطر المكونات (قابل للنمو: أضف اسم INCI كاملاً صغيراً) ──
+// التصنيف مبني على لائحة مستحضرات التجميل الأوروبية (EC) 1223/2009 وملاحقها،
+// وآراء لجنة السلامة العلمية SCCS، وتصنيفات ECHA وIARC وCIR.
+const RISK = {
+    // ── خطر عالٍ (أحمر) ──
+    "formaldehyde": { level: "high", why: "مادة محظورة في مستحضرات التجميل في الاتحاد الأوروبي (الملحق II)، ومصنفة مسرطنة مؤكدة (IARC المجموعة 1)." },
+    "quaternium-15": { level: "high", why: "محظور في الاتحاد الأوروبي (الملحق II)؛ يطلق الفورمالديهايد." },
+    "butylphenyl methylpropional": { level: "high", why: "محظور في الاتحاد الأوروبي منذ 1 مارس 2022 (الملحق II)، ومصنف ساماً للتكاثر (CMR 1B)." },
+    "hydroquinone": { level: "high", why: "محظور في كريمات التجميل في الاتحاد الأوروبي (الملحق II)؛ مهيج قوي ومسرطن محتمل." },
+    "dibutyl phthalate": { level: "high", why: "فثالات سامة للتكاثر؛ محظورة في مستحضرات التجميل في الاتحاد الأوروبي (الملحق II)." },
+    "isopropylparaben": { level: "high", why: "محظور في الاتحاد الأوروبي منذ 2014 (الملحق II) لضعف سلامته." },
+    "isobutylparaben": { level: "high", why: "محظور في الاتحاد الأوروبي منذ 2014 (الملحق II) لضعف سلامته." },
+    "propylparaben": { level: "high", why: "بارابين ذو نشاط استروجيني ضعيف؛ حدّ الاتحاد الأوروبي 0.14% للبارابينات مجتمعة (الملحق V)." },
+    "butylparaben": { level: "high", why: "بارابين ذو نشاط استروجيني ضعيف؛ حدّ الاتحاد الأوروبي 0.14% للبارابينات مجتمعة (الملحق V)." },
+    "triclosan": { level: "high", why: "معطل للغدد الصماء؛ حظرته إدارة الغذاء والدواء الأمريكية في صابون الاستعمال اليومي (2016)، والاتحاد الأوروبي يحدّه بـ0.3% (الملحق V)." },
+    "methylisothiazolinone": { level: "high", why: "مسبب حساسية قوي؛ محظور في المنتجات التي تبقى على الجلد في الاتحاد الأوروبي (2017)؛ اختير «مسبب الحساسية للعام 2013»." },
+    "methylchloroisothiazolinone": { level: "high", why: "مسبب حساسية قوي؛ مسموح به فقط في المنتجات التي تُغسل بتركيز أقصاه 15 جزءاً في المليون (الملحق V)." },
+    "oxybenzone": { level: "high", why: "واقٍ شمسي؛ لجنة السلامة العلمية SCCS أشارت إلى دلائل على تعطيل الغدد الصماء، والاتحاد الأوروبي يحدّه بـ2.2%." },
+    "p-phenylenediamine": { level: "high", why: "مسبب حساسية قوي؛ مقيد في صبغات الشعر بحد أقصاه 2% (الملحق III)." },
+    "toluene": { level: "high", why: "محظور في مستحضرات التجميل في الاتحاد الأوروبي (الملحق II)؛ سام للجهاز العصبي والتكاثر." },
+    "thimerosal": { level: "high", why: "مركب زئبقي محظور في مستحضرات التجميل في الاتحاد الأوروبي (الملحق II)." },
+    // ── خطر متوسط (برتقالي) ──
+    "methylparaben": { level: "moderate", why: "بارابين ضعيف النشاط الاستروجيني؛ لجنة SCCS تراه آمناً عند الحد الأقصى المسموح (الملحق V)." },
+    "homosalate": { level: "moderate", why: "واقٍ شمسي؛ لجنة SCCS رأت أنه غير آمن فوق 0.5%، والاتحاد الأوروبي يحدّه بـ7.34% لمنتجات الوجه فقط." },
+    "octinoxate": { level: "moderate", why: "واقٍ شمسي؛ لجنة SCCS أشارت إلى نشاط استروجيني ومضاد للأندروجين ضعيف؛ آمن حتى 10%." },
+    "octocrylene": { level: "moderate", why: "واقٍ شمسي؛ آمن حتى 10% حسب SCCS، لكنه يتحلل مع الزمن إلى بنزوفينون." },
+    "butylated hydroxyanisole": { level: "moderate", why: "مضاد أكسدة؛ مصنف مسرطن محتمل (IARC المجموعة 2B)، والاتحاد الأوروبي يحدّه بـ0.5%." },
+    "butylated hydroxytoluene": { level: "moderate", why: "مضاد أكسدة؛ قلق من تعطيل الغدد الصماء عند التعرض المزمن؛ حدّ الاتحاد الأوروبي 0.8%." },
+    "sodium lauryl sulfate": { level: "moderate", why: "منظف قوي؛ مهيج للجلد والعينين، خاصة في المنتجات التي تبقى على الجلد." },
+    "cocamide dea": { level: "moderate", why: "مصنف مسرطن محتمل (IARC المجموعة 2B)؛ مسموح به في الاتحاد الأوروبي بحد أقصاه 0.5%." },
+    "dmdm hydantoin": { level: "moderate", why: "يطلق الفورمالديهايد؛ حدّ الاتحاد الأوروبي 0.6%، ويجب وضع تحذير «يطلق الفورمالديهايد» فوق 10 أجزاء في المليون." },
+    "imidazolidinyl urea": { level: "moderate", why: "يطلق الفورمالديهايد؛ حدّ الاتحاد الأوروبي 0.6%، ويجب وضع تحذير «يطلق الفورمالديهايد» فوق 10 أجزاء في المليون." },
+    "diazolidinyl urea": { level: "moderate", why: "يطلق الفورمالديهايد؛ حدّ الاتحاد الأوروبي 0.5%، ويجب وضع تحذير «يطلق الفورمالديهايد» فوق 10 أجزاء في المليون." },
+    "resorcinol": { level: "moderate", why: "مقيد في صبغات الشعر (الملحق III)؛ ضمن أولويات الاتحاد الأوروبي لتقييم تعطيل الغدد الصماء." },
+    "retinyl palmitate": { level: "moderate", why: "مشتق فيتامين A؛ لجنة SCCS وضعت له حدوداً، وهناك قلق من التحسس الضوئي." },
+    "cyclopentasiloxane": { level: "moderate", why: "مادة ثابتة ومتراكمة (vPvB) في قائمة ECHA؛ منتجات الغسل التي تحتوي ≥0.1% ممنوعة منذ 31 يناير 2020." },
+    "parfum": { level: "moderate", why: "عطر مركّب قد يخفي مسببات حساسية وفثالات؛ الاتحاد الأوروبي يفرض الإفصاح عن 80 مسبب حساسية للعطور." },
+    // ── خطر منخفض (أصفر) ──
+    "sodium laureth sulfate": { level: "low", why: "منظف ألطف من SLS، لكنه قد يحمل أثراً من مادة 1,4-ديوكسان." },
+    "avobenzone": { level: "low", why: "واقٍ شمسي؛ إدارة الغذاء والدواء الأمريكية ترى أن البيانات طويلة المدى غير كافية؛ نادراً ما يسبب حساسية." },
+    "phenoxyethanol": { level: "low", why: "مادة حافظة؛ لجنة SCCS تراها آمنة حتى 1% (الملحق V)." },
+    "alcohol denat.": { level: "low", why: "كحول مجفف؛ قد يهيج البشرة الحساسة ويجففها." },
+    "limonene": { level: "low", why: "مسبب حساسية للعطور (الملحق III)؛ يجب الإفصاح عنه فوق 0.01% في منتجات الغسل و0.001% في المنتجات التي تبقى." },
+    "linalool": { level: "low", why: "مسبب حساسية للعطور (الملحق III)؛ يجب الإفصاح عنه فوق 0.01% في منتجات الغسل و0.001% في المنتجات التي تبقى." },
+    "geraniol": { level: "low", why: "مسبب حساسية للعطور (الملحق III)؛ يجب الإفصاح عنه فوق 0.01% في منتجات الغسل و0.001% في المنتجات التي تبقى." },
+    "citronellol": { level: "low", why: "مسبب حساسية للعطور (الملحق III)؛ يجب الإفصاح عنه فوق 0.01% في منتجات الغسل و0.001% في المنتجات التي تبقى." },
+    "coumarin": { level: "low", why: "مسبب حساسية للعطور (الملحق III)؛ يجب الإفصاح عنه فوق 0.01% في منتجات الغسل و0.001% في المنتجات التي تبقى." },
+    "eugenol": { level: "low", why: "مسبب حساسية للعطور (الملحق III)؛ يجب الإفصاح عنه فوق 0.01% في منتجات الغسل و0.001% في المنتجات التي تبقى." },
+    "hexyl cinnamal": { level: "low", why: "مسبب حساسية للعطور (الملحق III)؛ يجب الإفصاح عنه فوق 0.01% في منتجات الغسل و0.001% في المنتجات التي تبقى." },
+    "benzyl alcohol": { level: "low", why: "مسبب حساسية للعطور (الملحق III)؛ يجب الإفصاح عنه فوق 0.01% في منتجات الغسل و0.001% في المنتجات التي تبقى." },
+    // ── آمن (أخضر) ──
+    "aqua": { level: "safe", why: "ماء — آمن." },
+    "glycerin": { level: "safe", why: "مرطب آمن وشائع الاستعمال." },
+    "panthenol": { level: "safe", why: "فيتامين B5؛ مرطب ومهدئ آمن." },
+    "niacinamide": { level: "safe", why: "فيتامين B3؛ آمن ومدعوم بأدلة على فائدته للبشرة." },
+    "tocopherol": { level: "safe", why: "فيتامين E؛ مضاد أكسدة آمن." },
+    "citric acid": { level: "safe", why: "حمض طبيعي لضبط الحموضة؛ آمن." },
+    "zinc oxide": { level: "safe", why: "واقٍ شمسي معدني؛ إدارة الغذاء والدواء الأمريكية تصنفه آمناً وفعالاً." },
+    "titanium dioxide": { level: "safe", why: "واقٍ شمسي معدني؛ إدارة الغذاء والدواء الأمريكية تصنفه آمناً وفعالاً." },
+    "sodium benzoate": { level: "safe", why: "مادة حافظة آمنة عند الحدود المسموح بها (الملحق V)." },
+    "sodium citrate": { level: "safe", why: "منظم حموضة آمن." },
+    "cocamidopropyl betaine": { level: "safe", why: "منظف لطيف؛ آمن عند الحدود المسموح بها." },
+    "dimethicone": { level: "safe", why: "سيليكون آمن؛ يحبس الرطوبة ويحمي البشرة." },
+    "aloe barbadensis leaf juice": { level: "safe", why: "عصير الصبار؛ مهدئ ومرطب آمن." },
+    "sodium hyaluronate": { level: "safe", why: "هيالورونات الصوديوم؛ مرطب آمن وشائع." }
+};
+const ALIASES = {
+    "benzophenone-3": "oxybenzone",
+    "ethylhexyl methoxycinnamate": "octinoxate",
+    "butyl methoxydibenzoylmethane": "avobenzone",
+    "lilial": "butylphenyl methylpropional",
+    "bmhca": "butylphenyl methylpropional",
+    "mi": "methylisothiazolinone",
+    "mit": "methylisothiazolinone",
+    "mci": "methylchloroisothiazolinone",
+    "fragrance": "parfum",
+    "sls": "sodium lauryl sulfate",
+    "sles": "sodium laureth sulfate",
+    "d5": "cyclopentasiloxane",
+    "aloebarbadensis": "aloe barbadensis leaf juice",
+    "tocopherylacetate": "tocopherol",
+    "sodium lauryl sulphate": "sodium lauryl sulfate",
+    "sodium laureth sulphate": "sodium laureth sulfate"
+};
+// قواعد التطبيع: مطابقة اسم INCI مع الجدول (تشمل الأسماء المركبة مثل methylisothiazolinone)
+function normalizeINCI(raw) {
+    if (!raw) return "";
+    var name = String(raw).trim().toLowerCase();
+    name = name.replace(/^\s*[+*]\s*/, "").replace(/\s*\*\s*$/, "");
+    name = name.replace(/\s+/g, " ").trim();
+    if (ALIASES[name]) return ALIASES[name];
+    if (name.startsWith("peg")) return "PEG";
+    return name;
+}
+// إرجاع سجل المخاطر لمكوّن: {level, why, key} أو null عند غياب البيانات
+function lookupRisk(raw) {
+    var norm = normalizeINCI(raw);
+    if (norm === "PEG") return { level: "low", why: "بولي إيثيلين غليكول؛ قد يحمل أثراً من 1,4-ديوكسان وأكسيد الإيثيلين.", key: "PEG" };
+    if (!norm) return null;
+    var entry = RISK[norm];
+    if (entry) return { level: entry.level, why: entry.why, key: norm };
+    return null;
+}
+// حساب النقاط 0–100 من قائمة المكونات (مصفوفة نصوص INCI)
+// أسوأ مكوّن يحدد السقف: عالٍ → تحت 25، متوسط → تحت 50، منخفض → تحت 75.
+function scoreProduct(ingredients) {
+    var counts = { high: 0, moderate: 0, low: 0, safe: 0, unknown: 0 };
+    var rows = [];
+    (ingredients || []).forEach(function (raw) {
+        var rec = lookupRisk(raw);
+        if (rec) {
+            counts[rec.level === "safe" ? "safe" : rec.level]++;
+            rows.push({ name: raw, rec: rec });
+        } else {
+            counts.unknown++;
+            rows.push({ name: raw, rec: null });
+        }
+    });
+    var known = counts.high + counts.moderate + counts.low + counts.safe;
+    if (known === 0) return { score: null, band: "none", rows: rows, counts: counts };
+    var score, band;
+    if (counts.high > 0) { score = Math.max(5, 20 - (counts.high - 1) * 3); band = "bad"; }
+    else if (counts.moderate > 0) { score = Math.max(26, 45 - (counts.moderate - 1) * 3); band = "mid"; }
+    else if (counts.low > 0) { score = Math.max(51, 68 - (counts.low - 1) * 2); band = "mid"; }
+    else { score = Math.min(95, 88 + counts.safe); band = score >= 75 ? "good" : "mid"; }
+    return { score: score, band: band, rows: rows, counts: counts };
+}
+// اختصارات تقييم النقاط
+function bandLabel(score) {
+    if (score == null) return "بدون تقييم";
+    if (score >= 75) return "ممتاز";
+    if (score >= 50) return "جيد";
+    if (score >= 25) return "ضعيف";
+    return "سيئ";
+}
+const LEVEL_AR = { high: "خطر عالٍ", moderate: "خطر متوسط", low: "خطر منخفض", safe: "آمن" };
+const LEVEL_COLOR = { high: "#E63E11", moderate: "#EE8100", low: "#FECB02", safe: "#038141" };
+const LEVEL_BG = { high: "#E63E11", moderate: "#EE8100", low: "#FECB02", safe: "#038141" };
+function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+function displayName(p) {
+    var name = p.product_name || p.product_name_ar || "";
+    if (name && name.trim()) return name.trim();
+    var brand = p.brands || "";
+    if (brand && brand.trim()) return brand.trim().split(",")[0].trim();
+    var cat = (p.categories || "").split(",")[0].trim();
+    if (cat) return cat;
+    return "منتج بدون اسم";
+}
+function renderCosProduct(p, code) {
+    var out = document.getElementById("cos-out");
+    if (!out) return;
+    var ings = (p.ingredients || []).map(function (i) { return i.text || i.id || ""; }).filter(Boolean);
+    var res = scoreProduct(ings);
+    var img = p.image_url || p.image_small_url || "";
+    var name = displayName(p);
+    var band = res.band;
+    var vcls = band === "good" ? "good" : band === "mid" ? "mid" : band === "bad" ? "bad" : "none";
+    var vtext = res.score == null ? "بدون تقييم — لا توجد بيانات كافية عن المكونات"
+        : "التقييم: " + res.score + "/100 — " + bandLabel(res.score);
+    var numHtml = res.score == null
+        ? '<div class="cos-num na">؟</div>'
+        : '<div class="cos-num" style="background:' + (res.score >= 75 ? "#038141" : res.score >= 50 ? "#85BB2F" : res.score >= 25 ? "#EE8100" : "#E63E11") + '">' + res.score + '</div>';
+    var marker = res.score == null ? "" : '<i style="left:' + res.score + '%"></i>';
+    var knownRows = res.rows.filter(function (r) { return r.rec; });
+    var unknownRows = res.rows.filter(function (r) { return !r.rec; });
+    var rowsHtml = knownRows.map(function (r) {
+        return '<div class="cos-ing-row"><span class="cos-dot" style="background:' + LEVEL_COLOR[r.rec.level] + '"></span><div><div class="in">' + esc(r.name) + ' <span class="rl" style="color:' + LEVEL_COLOR[r.rec.level] + '">' + LEVEL_AR[r.rec.level] + '</span></div><div class="why">' + esc(r.rec.why) + '</div></div></div>';
+    }).join("");
+    var unkHtml = "";
+    if (unknownRows.length) {
+        unkHtml = '<details style="margin-top:10px"><summary style="cursor:pointer;font-weight:700;color:#6b7280">مكونات بدون بيانات (' + unknownRows.length + ') — اضغط لعرضها</summary><div class="cos-ing" style="padding:6px 0 0">' +
+            unknownRows.map(function (r) {
+                return '<div class="cos-ing-row unknown"><span class="cos-dot" style="background:#d1d5db"></span><div><div class="in">' + esc(r.name) + '</div><div class="why">لا توجد بيانات</div></div></div>';
+            }).join("") + '</div></details>';
+    }
+    var allerg = (p.allergens || "").trim();
+    var allergHtml = allerg ? '<div class="cos-allerg"><b>مسببات الحساسية:</b> ' + esc(allerg) + '</div>' : "";
+    out.innerHTML =
+        '<div class="cos-card">' +
+        '<div class="cos-verdict ' + vcls + '">' + esc(vtext) + '</div>' +
+        '<div class="cos-head">' +
+        (img ? '<img src="' + esc(img) + '" alt="صورة المنتج" loading="lazy">' : '<div style="width:84px;height:84px;border:1px solid #e5e7eb;border-radius:14px;display:grid;place-items:center;font-size:2rem">🧴</div>') +
+        '<div><div class="nm">' + esc(name) + '</div>' +
+        (p.brands && p.brands.split(",")[0].trim().toLowerCase() !== name.toLowerCase() ? '<div class="br">' + esc(p.brands) + '</div>' : "") +
+        (p.quantity ? '<div class="qt" dir="ltr">' + esc(p.quantity) + '</div>' : "") +
+        (code ? '<div class="bc">باركود: ' + esc(code) + '</div>' : "") +
+        '</div></div>' +
+        '<div class="cos-score">' + numHtml +
+        '<div><div class="txt">' + (res.score == null ? "بدون تقييم" : bandLabel(res.score) + " — " + res.score + "/100") + '</div>' +
+        '<div class="sub">' + (res.score == null ? "لا توجد بيانات كافية عن المكونات" : (res.counts.high ? res.counts.high + " مكوّن عالي الخطر" : res.counts.moderate ? res.counts.moderate + " مكوّن متوسط الخطر" : res.counts.low ? res.counts.low + " مكوّن منخفض الخطر" : "مكونات آمنة فقط")) + '</div></div></div>' +
+        '<div class="cos-bar">' + marker + '</div>' +
+        '<div class="cos-ing-h">المكونات (' + res.rows.length + '): ' + (knownRows.length ? knownRows.length + " معروفة، " : "") + unknownRows.length + ' بدون بيانات</div>' +
+        '<div class="cos-ing">' + (rowsHtml || '<div class="text-gray-500 py-2">لا توجد قائمة مكونات لهذا المنتج في قاعدة البيانات.</div>') + unkHtml + '</div>' +
+        allergHtml +
+        '</div>';
+}
+// ── البحث في Open Beauty Facts ──
+async function fetchCosBarcode(code) {
+    var out = document.getElementById("cos-out");
+    if (out) out.innerHTML = '<p class="text-gray-500 py-2">جارٍ البحث…</p>';
+    try {
+        var r = await fetch("https://world.openbeautyfacts.org/api/v2/product/" + encodeURIComponent(code) + ".json");
+        var d = await r.json();
+        if (d.status === 1 && d.product) { renderCosProduct(d.product, code); return true; }
+        if (out) out.innerHTML = '<div class="bg-amber-50 border border-amber-300 rounded-xl p-4"><b class="text-amber-900">لم نجد هذا المنتج في قاعدة Open Beauty Facts بعد.</b><p class="text-amber-800 mt-1">جرّب اسماً آخر، أو تحقق من رقم الباركود.</p></div>';
+        return false;
+    } catch (e) {
+        if (out) out.innerHTML = '<div class="bg-red-50 border border-red-300 rounded-xl p-4"><b class="text-red-800">تعذر الاتصال بقاعدة البيانات.</b><p class="text-red-700 mt-1">تحقق من اتصالك بالإنترنت وحاول مرة أخرى.</p></div>';
+        return false;
+    }
+}
+async function searchOBF() {
+    var q = (document.getElementById("cos-q") || {}).value || "";
+    q = q.trim();
+    var out = document.getElementById("cos-out");
+    if (!q) { if (out) out.innerHTML = '<p class="text-gray-500 py-2">اكتب اسم منتج أو رقم باركود أولاً.</p>'; return; }
+    if (/^\d{8,14}$/.test(q)) { fetchCosBarcode(q); return; }
+    if (out) out.innerHTML = '<p class="text-gray-500 py-2">جارٍ البحث…</p>';
+    try {
+        var r = await fetch("https://world.openbeautyfacts.org/cgi/search.pl?search_terms=" + encodeURIComponent(q) + "&search_simple=1&action=process&json=1&page_size=8&fields=code,product_name,brands,quantity,image_small_url,ingredients_text,allergens");
+        var d = await r.json();
+        var list = d.products || [];
+        if (!list.length) {
+            if (out) out.innerHTML = '<div class="bg-amber-50 border border-amber-300 rounded-xl p-4"><b class="text-amber-900">لم نجد نتائج مطابقة.</b><p class="text-amber-800 mt-1">جرّب اسماً آخر أو رقم الباركود.</p></div>';
+            return;
+        }
+        var html = '<div class="cos-card"><div class="cos-ing-h" style="padding-top:14px">نتائج البحث (' + list.length + ')</div><div class="cos-ing">';
+        list.forEach(function (p) {
+            var nm = displayName(p);
+            var pill = (p.ingredients_text || p.ingredients_text_en) ? '<span class="cos-pill na">…</span>' : '<span class="cos-pill na">؟</span>';
+            html += '<div class="cos-ing-row" style="cursor:pointer" onclick="fetchCosBarcode(\'' + String(p.code).replace(/'/g, "") + '\')">' +
+                (p.image_small_url ? '<img src="' + esc(p.image_small_url) + '" alt="" loading="lazy" style="width:48px;height:48px;object-fit:contain;border:1px solid #e5e7eb;border-radius:10px;flex:none">' : '<span style="width:48px;height:48px;display:grid;place-items:center;font-size:1.4rem;flex:none">🧴</span>') +
+                '<div style="flex:1;min-width:0"><div class="in">' + esc(nm) + '</div>' +
+                (p.brands ? '<div class="why">' + esc(p.brands) + (p.quantity ? " — " + esc(p.quantity) : "") + '</div>' : "") +
+                '<div class="why">باركود: ' + esc(p.code) + '</div></div>' + pill + '</div>';
+        });
+        html += '</div></div>';
+        out.innerHTML = html;
+    } catch (e) {
+        if (out) out.innerHTML = '<div class="bg-red-50 border border-red-300 rounded-xl p-4"><b class="text-red-800">تعذر الاتصال بقاعدة البيانات.</b><p class="text-red-700 mt-1">تحقق من اتصالك بالإنترنت وحاول مرة أخرى.</p></div>';
+    }
+}
+// ── المسح بالكاميرا (نفس نمط /scan: BarcodeDetector مع html5-qrcode كبديل) ──
+let html5Qr = null;
+function startScan() {
+    var box = document.getElementById("scan-box");
+    var wrap = document.getElementById("scanner");
+    if (!box || !wrap) return;
+    wrap.style.display = "block";
+    if ("BarcodeDetector" in window) {
+        if (!window.__camStream) {
+            navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } }).then(function (stream) {
+                window.__camStream = stream;
+                var video = document.createElement("video");
+                video.setAttribute("playsinline", "true");
+                video.style.width = "100%";
+                video.style.maxHeight = "320px";
+                video.srcObject = stream;
+                video.play();
+                box.appendChild(video);
+                var det = new BarcodeDetector({ formats: ["ean_13", "ean_8", "upc_a", "upc_e", "code_128"] });
+                var timer = setInterval(function () {
+                    det.detect(video).then(function (codes) {
+                        if (codes && codes.length) { clearInterval(timer); stopScan(); fetchCosBarcode(codes[0].rawValue); }
+                    }).catch(function () { });
+                }, 400);
+                window.__scanTimer = timer;
+            }).catch(function () { fallbackQr(); });
+        }
+    } else { fallbackQr(); }
+    function fallbackQr() {
+        var s = document.createElement("script");
+        s.src = "https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js";
+        s.onload = function () {
+            if (!html5Qr) html5Qr = new Html5Qrcode("scan-box");
+            html5Qr.start({ facingMode: "environment" }, { fps: 10, qrbox: { width: 250, height: 250 } },
+                function (txt) { stopScan(); fetchCosBarcode(txt); },
+                function () { });
+        };
+        document.head.appendChild(s);
+    }
+}
+function stopScan() {
+    var wrap = document.getElementById("scanner");
+    if (wrap) wrap.style.display = "none";
+    if (window.__scanTimer) { clearInterval(window.__scanTimer); window.__scanTimer = null; }
+    if (window.__camStream) { window.__camStream.getTracks().forEach(function (t) { t.stop(); }); window.__camStream = null; }
+    if (html5Qr) { html5Qr.stop().catch(function () { }); }
+    var box = document.getElementById("scan-box");
+    if (box) box.innerHTML = "";
+}
+// خطاف اختبار (لا يؤثر على الاستعمال العادي)
+window.__bsharati = { RISK: RISK, ALIASES: ALIASES, normalizeINCI: normalizeINCI, lookupRisk: lookupRisk, scoreProduct: scoreProduct, bandLabel: bandLabel, displayName: displayName, renderCosProduct: renderCosProduct };
+            window.searchOBF = searchOBF;
+            window.startScan = startScan;
+            window.stopScan = stopScan;
+
+        });
+    </script>
+    <!-- PWA: تسجيل عامل الخدمة وزر تثبيت التطبيق -->
+    <script>
+    (function () {
+        'use strict';
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('sw.js').catch(function () {});
+            });
+        }
+        var deferredPrompt = null;
+        var installBtn = document.getElementById('pwa-install-btn');
+        window.addEventListener('beforeinstallprompt', function (e) {
+            e.preventDefault();
+            deferredPrompt = e;
+            if (installBtn) {
+                installBtn.style.display = '';
+                installBtn.classList.remove('hidden');
+                installBtn.classList.add('inline-flex');
+            }
+        });
+        if (installBtn) {
+            installBtn.addEventListener('click', function () {
+                if (!deferredPrompt) { return; }
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then(function () { deferredPrompt = null; }).catch(function () {});
+            });
+        }
+        window.addEventListener('appinstalled', function () {
+            if (installBtn) { installBtn.style.display = 'none'; }
+            deferredPrompt = null;
+        });
+    })();
+    </script>
+</body>
+</html>
