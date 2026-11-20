@@ -5,6 +5,102 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "lpa-horizon-zeus-heart-trials",
+    "img": "hero-lpa-horizon-zeus-heart-trials.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "دواءان للقلب خفّضا الأرقام ولم يمنعا الجلطات: ما الذي كشفته تجربتا HORIZON وZEUS؟",
+    "en": "Two heart drugs cut the numbers but not the heart attacks: what the HORIZON and ZEUS trials found",
+    "fr": "Deux médicaments pour le cœur ont fait baisser les chiffres sans prévenir les infarctus : que révèlent les essais HORIZON et ZEUS ?"
+  },
+  {
+    "slug": "single-pill-hypertension-catch",
+    "img": "hero-single-pill-hypertension-catch.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "حبة واحدة للضغط بدل ثلاث: كيف ضاعفت تجربة جديدة نسبة السيطرة على ضغط الدم؟",
+    "en": "One pill for blood pressure instead of three: how a new trial more than doubled blood-pressure control",
+    "fr": "Un seul comprimé contre l'hypertension au lieu de trois : comment un nouvel essai a plus que doublé le contrôle de la tension"
+  },
+  {
+    "slug": "who-obesity-plan-2030",
+    "img": "hero-who-obesity-plan-2030.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "منظمة الصحة العالمية و21 دولة يتعهدون بخفض السمنة 5% بحلول 2030: ما الخطة؟",
+    "en": "WHO and 21 countries pledge to cut obesity by 5% by 2030: what is the plan?",
+    "fr": "L'OMS et 21 pays s'engagent à réduire l'obésité de 5 % d'ici 2030 : quel est le plan ?"
+  },
+  {
+    "slug": "optimpacing-heart-pacing",
+    "img": "hero-optimpacing-heart-pacing.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "منظم ضربات قلب يتبع كهرباء القلب الطبيعية: نتائج تجربة OptimPacing",
+    "en": "A pacemaker that follows the heart's natural wiring: what the OptimPacing trial found",
+    "fr": "Un stimulateur cardiaque qui suit le câblage naturel du cœur : ce que l'essai OptimPacing a montré"
+  },
+  {
+    "slug": "survodutide-heart-safety",
+    "img": "hero-survodutide-heart-safety.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "سورفودوتيد: دواء جديد للسمنة يجتاز اختبار سلامة القلب — ماذا نعرف عنه؟",
+    "en": "Survodutide: a new obesity drug passes its heart-safety test — what do we know?",
+    "fr": "Survodutide : un nouveau médicament contre l'obésité passe le test de sécurité cardiaque — que sait-on ?"
+  },
+  {
+    "slug": "fatty-liver-reversal-diet",
+    "img": "hero-fatty-liver-reversal-diet.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الكبد الدهني: هل يمكن عكسه بالغذاء؟ ما قالته تجربتان عشوائيتان في 2026",
+    "en": "Fatty liver: can food reverse it? What two randomised trials said in 2026",
+    "fr": "Stéatose hépatique : l'alimentation peut-elle l'inverser ? Ce que deux essais randomisés ont montré en 2026"
+  },
+  {
+    "slug": "intermittent-fasting-guide",
+    "img": "hero-intermittent-fasting-guide.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الصيام المتقطع 16:8: هل ينقص الوزن فعلاً بعد سنة؟ ما قالته التجارب",
+    "en": "Intermittent fasting 16:8: does it really cut weight after a year? What the trials found",
+    "fr": "Jeûne intermittent 16:8 : fait-il vraiment perdre du poids après un an ? Ce que les essais ont montré"
+  },
+  {
+    "slug": "honey-vs-sugar",
+    "img": "hero-honey-vs-sugar.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "العسل أم السكر: أيهما أفضل لصحتك؟ ما قاله تحليل 18 تجربة سريرية",
+    "en": "Honey or sugar: which is better for your health? What an analysis of 18 clinical trials found",
+    "fr": "Miel ou sucre : lequel est meilleur pour votre santé ? Ce que l’analyse de 18 essais cliniques a montré"
+  },
+  {
     "slug": "baxdrostat-blood-pressure",
     "img": "hero-baxdrostat-blood-pressure.webp",
     "langs": [
