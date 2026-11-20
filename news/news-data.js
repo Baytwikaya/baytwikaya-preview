@@ -5,6 +5,102 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "baxdrostat-blood-pressure",
+    "img": "hero-baxdrostat-blood-pressure.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "باكسدروستات: دواء ضغط الدم الذي يستمر مفعوله سنتين بعد إيقافه؟ ما كشفته دراسة NEJM في 2026",
+    "en": "Baxdrostat: the blood-pressure pill that keeps working two years after you stop? What the NEJM study found",
+    "fr": "Baxdrostat : le médicament contre l'hypertension qui agit encore deux ans après l'arrêt ? Ce que l'étude du NEJM a montré"
+  },
+  {
+    "slug": "asundexian-stroke-prevention",
+    "img": "hero-asundexian-stroke-prevention.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "أسونديكسيان: دواء جديد يقلل خطر الجلطة الثانية بنسبة 26% — لمن يناسب ولمن لا يناسب؟",
+    "en": "Asundexian: a new drug cuts the risk of a second stroke by 26% — who can take it and who cannot?",
+    "fr": "Asundexian : un nouveau médicament réduit de 26 % le risque d'un second AVC — pour qui, et pour qui pas ?"
+  },
+  {
+    "slug": "melatonin-heart-failure",
+    "img": "hero-melatonin-heart-failure.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "دواء واحد للسمنة يحسّن النوم ويخفف ألم الركبة؟ ما كشفته نتائج ريتاتروتيد في 2026",
+    "en": "Dark chocolate, your heart and your mood: what three 2026 studies found",
+    "fr": "Le chocolat noir, le cœur et l’humeur : ce que trois études de 2026 ont montré"
+  },
+  {
+    "slug": "antibiotics-resistance-who",
+    "img": "hero-antibiotics-resistance-who.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "دواء واحد للسمنة يحسّن النوم ويخفف ألم الركبة؟ ما كشفته نتائج ريتاتروتيد في 2026",
+    "en": "Dark chocolate, your heart and your mood: what three 2026 studies found",
+    "fr": "Le chocolat noir, le cœur et l’humeur : ce que trois études de 2026 ont montré"
+  },
+  {
+    "slug": "winter-illness-why",
+    "img": "hero-winter-illness-why.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "لماذا نمرض أكثر في الشتاء؟ البرد والأنف والهواء الجاف — ما يقوله العلم",
+    "en": "Why do we get sick more in winter? Cold, noses and dry air — what the science says",
+    "fr": "Pourquoi tombe-t-on plus malade en hiver ? Froid, nez et air sec — ce que dit la science"
+  },
+  {
+    "slug": "heat-medicines-shield",
+    "img": "hero-heat-medicines-shield.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الحرارة تُضعف الأدوية: مبادرة SHIELD تحذر — دواؤك قد يفقد قوته دون أن تلاحظ",
+    "en": "Heat weakens medicines: the SHIELD warning — your drug may lose its power without you noticing",
+    "fr": "La chaleur affaiblit les médicaments : l’alerte SHIELD — votre traitement peut perdre son efficacité sans que vous le remarquiez"
+  },
+  {
+    "slug": "frozen-bread-blood-sugar",
+    "img": "hero-frozen-bread-blood-sugar.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "جمّد خبزك ثم حمّصه: هل يخفض ذلك سكر الدم فعلاً؟ ما كشفته الدراسات",
+    "en": "Freeze your bread, then toast it: does it really lower blood sugar? What the studies found",
+    "fr": "Congelez votre pain puis grillez-le : cela baisse-t-il vraiment la glycémie ? Ce que les études ont montré"
+  },
+  {
+    "slug": "migraine-smoking-stroke",
+    "img": "hero-migraine-smoking-stroke.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الصداع النصفي مع التدخين: خطر السكتة يتضاعف أكثر من 3 مرات قبل سن الستين",
+    "en": "Migraine plus smoking: stroke risk more than triples before age 60",
+    "fr": "Migraine et tabac : le risque d'AVC multiplié par plus de 3 avant 60 ans"
+  },
+  {
     "slug": "guide-hijama-casablanca",
     "img": "hero-guide-hijama-casablanca.webp",
     "langs": [
