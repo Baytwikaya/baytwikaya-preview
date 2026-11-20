@@ -12,7 +12,7 @@ var BAYT_NEWS_DATA = [
       "en",
       "fr"
     ],
-    "ar": "دليل الحجامة في كازابلانكا: الأنواع، وكيف تختار مركزاً، وماذا يحدث في الجلسة",
+    "ar": "دليل الحجامة في الدار البيضاء: الأنواع، وكيف تختار مركزاً، وماذا يحدث في الجلسة",
     "en": "A guide to hijama in Casablanca: types, how to choose a centre, and what happens in a session",
     "fr": "Guide de la hijama à Casablanca : types, choix du centre et déroulement d'une séance"
   },
