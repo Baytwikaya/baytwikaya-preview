@@ -13,100 +13,160 @@ var BAYT_NEWS_DATA = [
     "ar": "بيضتان في اليوم وينخفض الكولسترول السيئ؟ دراسة 2025 تقلب فهمنا للبيض والدهون المشبعة"
   },
   {
-      "slug": "daraxonrasib-pancreatic-cancer",
-      "img": "hero-daraxonrasib-pancreatic-cancer.webp",
-      "langs": [
-          "ar",
-          "en",
-          "fr"
-      ],
-      "ar": "دواء جديد مع العلاج الكيميائي يقلّص أورام سرطان البنكرياس لدى 60% من المرضى: ما الذي كشفته التجربة؟",
-      "en": "A new drug with chemotherapy shrank pancreatic cancer tumours in 60% of patients: what did the trial find?",
-      "fr": "Un nouveau médicament avec la chimiothérapie réduit les tumeurs du cancer du pancréas chez 60 % des patients : que révèle l’essai ?"
+    "slug": "hepatitis-a-morocco-rise",
+    "img": "hero-hepatitis-a-morocco-rise.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "التهاب الكبد أ في المغرب: قفزة كبيرة بعد الجائحة وتركّز الإصابات في جهتين",
+    "en": "Hepatitis A in Morocco: cases surge after the pandemic and cluster in two regions",
+    "fr": "Hépatite A au Maroc : les cas bondissent après la pandémie et se concentrent dans deux régions"
   },
   {
-      "slug": "chronic-loneliness-dementia",
-      "img": "hero-chronic-loneliness-dementia.webp",
-      "langs": [
-          "ar",
-          "en",
-          "fr"
-      ],
-      "ar": "الوحدة المزمنة ترفع خطر الخرف بنسبة 38%: الوحدة العابرة لا تفعل ذلك",
-      "en": "Chronic loneliness raises dementia risk by 38%: occasional loneliness does not",
-      "fr": "La solitude chronique augmente le risque de démence de 38 % : la solitude occasionnelle, non"
+    "slug": "belly-fat-alzheimer-proteins",
+    "img": "hero-belly-fat-alzheimer-proteins.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "دهون البطن ترتبط بتراكم بروتينات ألزهايمر في الدماغ: ماذا كشفت دراسة جديدة؟",
+    "en": "Belly fat linked to Alzheimer proteins building up in the brain: what did the new study find?",
+    "fr": "La graisse abdominale liée à l’accumulation des protéines d’Alzheimer dans le cerveau : que révèle la nouvelle étude ?"
   },
   {
-      "slug": "gut-bacteria-visceral-fat",
-      "img": "hero-gut-bacteria-visceral-fat.webp",
-      "langs": [
-          "ar",
-          "en",
-          "fr"
-      ],
-      "ar": "بكتيريا في الأمعاء تساعد على حرق الدهون الحشوية: اكتشاف جديد — لكنه حتى الآن في الفئران فقط",
-      "en": "A gut bacterium helps burn visceral fat: a new discovery — but so far only in mice",
-      "fr": "Une bactérie intestinale aide à brûler la graisse viscérale : une découverte — mais pour l’instant chez la souris seulement"
+    "slug": "spine-bones-brain-health",
+    "img": "hero-spine-bones-brain-health.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "كثافة عظام العمود الفقري ترتبط بصحة الدماغ والذاكرة: ماذا وجدت دراسة جونز هوبكنز؟",
+    "en": "Spine bone density linked to brain health and memory: what the Johns Hopkins study found",
+    "fr": "La densité osseuse de la colonne vertébrale liée à la santé du cerveau et à la mémoire : ce qu’a trouvé l’étude Johns Hopkins"
   },
   {
-      "slug": "night-light-heart",
-      "img": "hero-night-light-heart.webp",
-      "langs": [
-          "ar",
-          "en",
-          "fr"
-      ],
-      "ar": "النوم مع الضوء مضاءً يهدد صحة القلب: ماذا وجدت دراسة شملت أكثر من 70 ألف شخص؟",
-      "en": "Sleeping with the light on threatens heart health: what did a study of more than 70,000 people find?",
-      "fr": "Dormir avec la lumière allumée menace la santé du cœur : que révèle une étude de plus de 70 000 personnes ?"
+    "slug": "mrna-flu-vaccine-mflusiva",
+    "img": "hero-mrna-flu-vaccine-mflusiva.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "أول لقاح إنفلونزا بتقنية mRNA يدخل الاستخدام التجاري: ماذا كشفت التجربة عن فعاليته؟",
+    "en": "First mRNA flu vaccine enters commercial use: what did the trial reveal about its effectiveness?",
+    "fr": "Premier vaccin contre la grippe à ARNm en usage commercial : que révèle l’essai sur son efficacité ?"
   },
   {
-      "slug": "food-myths-everyday",
-      "img": "hero-food-myths-everyday.webp",
-      "langs": [
-          "ar",
-          "en",
-          "fr"
-      ],
-      "ar": "خرافات غذائية نصدقها كل يوم: الكربوهيدرات والسعرات والدهون — ما الحقيقة؟",
-      "en": "Food myths we believe every day: carbs, calories and fats — what is the truth?",
-      "fr": "Des idées reçues sur l’alimentation que l’on croit chaque jour : glucides, calories et graisses — quelle est la vérité ?"
+    "slug": "scoliosis-children-adam-test",
+    "img": "hero-scoliosis-children-adam-test.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "علامات صامتة قد تكشف إصابة طفلك بالجنف: اختبار آدم البسيط في المنزل",
+    "en": "Silent signs that may reveal scoliosis in your child: the simple Adam's test at home",
+    "fr": "Des signes silencieux qui peuvent révéler une scoliose chez votre enfant : le test d'Adam, simple à faire à la maison"
   },
   {
-      "slug": "coffee-heart-disease",
-      "img": "hero-coffee-heart-disease.webp",
-      "langs": [
-          "ar",
-          "en",
-          "fr"
-      ],
-      "ar": "القهوة والقلب: كوبان إلى ثلاثة أكواب يومياً يرتبطان بانخفاض خطر أمراض القلب بنسبة 15%",
-      "en": "Coffee and the heart: two to three cups a day linked to a 15% lower risk of cardiovascular disease",
-      "fr": "Le café et le cœur : deux à trois tasses par jour associées à un risque de maladie cardiovasculaire réduit de 15 %"
+    "slug": "daraxonrasib-pancreatic-cancer",
+    "img": "hero-daraxonrasib-pancreatic-cancer.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "دواء جديد مع العلاج الكيميائي يقلّص أورام سرطان البنكرياس لدى 60% من المرضى: ما الذي كشفته التجربة؟",
+    "en": "A new drug with chemotherapy shrank pancreatic cancer tumours in 60% of patients: what did the trial find?",
+    "fr": "Un nouveau médicament avec la chimiothérapie réduit les tumeurs du cancer du pancréas chez 60 % des patients : que révèle l’essai ?"
   },
   {
-      "slug": "walking-pace-steps-longevity",
-      "img": "hero-walking-pace-steps-longevity.webp",
-      "langs": [
-          "ar",
-          "en",
-          "fr"
-      ],
-      "ar": "سرعة المشي مهمة بقدر عدد الخطوات: أقل من 5,000 خطوة سريعة تعادل 7,500 خطوة بطيئة",
-      "en": "Walking pace matters as much as step count: under 5,000 brisk steps match 7,500 slow ones",
-      "fr": "L’allure de la marche compte autant que le nombre de pas : moins de 5 000 pas rapides équivalent à 7 500 pas lents"
+    "slug": "chronic-loneliness-dementia",
+    "img": "hero-chronic-loneliness-dementia.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الوحدة المزمنة ترفع خطر الخرف بنسبة 38%: الوحدة العابرة لا تفعل ذلك",
+    "en": "Chronic loneliness raises dementia risk by 38%: occasional loneliness does not",
+    "fr": "La solitude chronique augmente le risque de démence de 38 % : la solitude occasionnelle, non"
   },
   {
-      "slug": "diabetes-brain-thinning",
-      "img": "hero-diabetes-brain-thinning.webp",
-      "langs": [
-          "ar",
-          "en",
-          "fr"
-      ],
-      "ar": "السكري من النوع الثاني يُرقّق قشرة الدماغ بسرعة أكبر: ضبط السكر يحمي الدماغ أيضاً",
-      "en": "Type 2 diabetes thins the brain’s cortex faster: controlling blood sugar protects the brain too",
-      "fr": "Le diabète de type 2 amincit le cortex cérébral plus vite : contrôler sa glycémie protège aussi le cerveau"
+    "slug": "gut-bacteria-visceral-fat",
+    "img": "hero-gut-bacteria-visceral-fat.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "بكتيريا في الأمعاء تساعد على حرق الدهون الحشوية: اكتشاف جديد — لكنه حتى الآن في الفئران فقط",
+    "en": "A gut bacterium helps burn visceral fat: a new discovery — but so far only in mice",
+    "fr": "Une bactérie intestinale aide à brûler la graisse viscérale : une découverte — mais pour l’instant chez la souris seulement"
+  },
+  {
+    "slug": "night-light-heart",
+    "img": "hero-night-light-heart.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "النوم مع الضوء مضاءً يهدد صحة القلب: ماذا وجدت دراسة شملت أكثر من 70 ألف شخص؟",
+    "en": "Sleeping with the light on threatens heart health: what did a study of more than 70,000 people find?",
+    "fr": "Dormir avec la lumière allumée menace la santé du cœur : que révèle une étude de plus de 70 000 personnes ?"
+  },
+  {
+    "slug": "food-myths-everyday",
+    "img": "hero-food-myths-everyday.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "خرافات غذائية نصدقها كل يوم: الكربوهيدرات والسعرات والدهون — ما الحقيقة؟",
+    "en": "Food myths we believe every day: carbs, calories and fats — what is the truth?",
+    "fr": "Des idées reçues sur l’alimentation que l’on croit chaque jour : glucides, calories et graisses — quelle est la vérité ?"
+  },
+  {
+    "slug": "coffee-heart-disease",
+    "img": "hero-coffee-heart-disease.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "القهوة والقلب: كوبان إلى ثلاثة أكواب يومياً يرتبطان بانخفاض خطر أمراض القلب بنسبة 15%",
+    "en": "Coffee and the heart: two to three cups a day linked to a 15% lower risk of cardiovascular disease",
+    "fr": "Le café et le cœur : deux à trois tasses par jour associées à un risque de maladie cardiovasculaire réduit de 15 %"
+  },
+  {
+    "slug": "walking-pace-steps-longevity",
+    "img": "hero-walking-pace-steps-longevity.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "سرعة المشي مهمة بقدر عدد الخطوات: أقل من 5,000 خطوة سريعة تعادل 7,500 خطوة بطيئة",
+    "en": "Walking pace matters as much as step count: under 5,000 brisk steps match 7,500 slow ones",
+    "fr": "L’allure de la marche compte autant que le nombre de pas : moins de 5 000 pas rapides équivalent à 7 500 pas lents"
+  },
+  {
+    "slug": "diabetes-brain-thinning",
+    "img": "hero-diabetes-brain-thinning.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "السكري من النوع الثاني يُرقّق قشرة الدماغ بسرعة أكبر: ضبط السكر يحمي الدماغ أيضاً",
+    "en": "Type 2 diabetes thins the brain’s cortex faster: controlling blood sugar protects the brain too",
+    "fr": "Le diabète de type 2 amincit le cortex cérébral plus vite : contrôler sa glycémie protège aussi le cerveau"
   },
   {
     "slug": "lpa-horizon-zeus-heart-trials",
