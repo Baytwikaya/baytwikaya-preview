@@ -5,6 +5,14 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "eggs-cholesterol-saturated-fat",
+    "img": "hero-eggs-cholesterol.webp",
+    "langs": [
+      "ar"
+    ],
+    "ar": "بيضتان في اليوم وينخفض الكولسترول السيئ؟ دراسة 2025 تقلب فهمنا للبيض والدهون المشبعة"
+  },
+  {
       "slug": "daraxonrasib-pancreatic-cancer",
       "img": "hero-daraxonrasib-pancreatic-cancer.webp",
       "langs": [
