@@ -5,6 +5,66 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "long-sitting-heart-exercise",
+    "img": "hero-long-sitting-heart-exercise.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الجلوس الطويل يضر القلب حتى مع ممارسة الرياضة: ما كشفته دراسة التوائم في كولورادو",
+    "en": "Long sitting harms the heart even if you exercise: what the Colorado twin study found",
+    "fr": "Rester assis longtemps nuit au cœur même si vous faites du sport : ce qu’a révélé l’étude des jumeaux du Colorado"
+  },
+  {
+    "slug": "sleep-appetite-alzheimer-early-signs",
+    "img": "hero-sleep-appetite-alzheimer-early-signs.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "قبل أن تضعف الذاكرة: تغيّرات النوم والشهية قد تكشف بدايات ألزهايمر",
+    "en": "Before memory fades: sleep and appetite changes may reveal the beginnings of Alzheimer's",
+    "fr": "Avant que la mémoire ne s'affaiblisse : les changements du sommeil et de l'appétit peuvent révéler les débuts d'Alzheimer"
+  },
+  {
+    "slug": "turmeric-knee-osteoarthritis-cochrane",
+    "img": "hero-turmeric-knee-osteoarthritis-cochrane.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "هل يخفف الكركم آلام خشونة الركبة؟ مراجعة كوكرين تشكك في فعاليته",
+    "en": "Does turmeric ease knee osteoarthritis pain? A Cochrane review doubts the benefit",
+    "fr": "Le curcuma soulage-t-il l'arthrose du genou ? Une revue Cochrane en doute"
+  },
+  {
+    "slug": "man-flu-real-men-viruses",
+    "img": "hero-man-flu-real-men-viruses.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "«إنفلونزا الرجال» حقيقية؟ دراسة على الفئران تجد أن الذكور يعانون مضاعفات فيروسية أشد",
+    "en": "Is 'man flu' real? A mouse study finds males suffer worse viral complications than females",
+    "fr": "La « grippe de l’homme » est-elle réelle ? Une étude sur des souris montre des complications virales plus graves chez les mâles"
+  },
+  {
+    "slug": "gut-bacteria-selenium-cartilage-damage",
+    "img": "hero-gut-bacteria-selenium-cartilage-damage.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "بكتيريا الأمعاء واضطراب السيلينيوم: مؤشرات جديدة مرتبطة بتلف الغضاريف في خشونة المفاصل",
+    "en": "Gut bacteria changes and selenium disorder: new markers linked to cartilage damage in osteoarthritis",
+    "fr": "Changements des bactéries intestinales et trouble du sélénium : de nouveaux marqueurs liés aux lésions du cartilage dans l'arthrose"
+  },
+  {
     "slug": "eggs-cholesterol-saturated-fat",
     "img": "hero-eggs-cholesterol.webp",
     "langs": [
