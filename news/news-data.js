@@ -5,6 +5,66 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "pfas-breast-cancer-aggressive",
+    "img": "hero-pfas-breast-cancer-aggressive.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "مواد كيميائية «أبدية» في الماء والأواني مرتبطة بسرطان ثدي أكثر عدوانية؟ ما كشفته دراسة أمريكية في 2026",
+    "en": "“Forever chemicals” in water and cookware linked to more aggressive breast cancer? What a 2026 US study found",
+    "fr": "Des produits chimiques « éternels » dans l’eau et les ustensiles liés à un cancer du sein plus agressif ? Ce qu’a révélé une étude américaine en 2026"
+  },
+  {
+    "slug": "nasal-mrna-drops-memory-mice",
+    "img": "hero-nasal-mrna-drops-memory-mice.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "قطرات أنفية تجريبية تعيد للفئران المسنّة ذاكرة الشباب — لكنها ليست علاجا لألزهايمر بعد",
+    "en": "Experimental nasal drops restore young memory in old mice — but they are not an Alzheimer's treatment yet",
+    "fr": "Des gouttes nasales expérimentales rendent aux vieilles souris leur mémoire de jeunesse — mais ce n'est pas encore un traitement contre Alzheimer"
+  },
+  {
+    "slug": "inclisiran-cholesterol-shot-heart-events",
+    "img": "hero-inclisiran-cholesterol-shot-heart-events.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "حقنة مرتين في السنة تخفّض خطر النوبات القلبية والسكتات؟ ما أثبتته تجربة ORION-4 في 2026",
+    "en": "A twice-yearly cholesterol shot that cuts heart attacks and strokes? What the ORION-4 trial proved in 2026",
+    "fr": "Une injection deux fois par an qui réduit crises cardiaques et AVC ? Ce que l’essai ORION-4 a prouvé en 2026"
+  },
+  {
+    "slug": "air-pollution-dementia-risk",
+    "img": "hero-air-pollution-dementia-risk.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "تلوث الهواء يسرّع الخرف: خطر أعلى بنسبة 25% في المناطق الأكثر تلوثاً — ماذا كشفت دراسة 2026؟",
+    "en": "Air pollution speeds up dementia: 25% higher risk in the most polluted areas — what a 2026 study found",
+    "fr": "La pollution de l'air accélère la démence : un risque supérieur de 25 % dans les zones les plus polluées — ce qu'a révélé une étude de 2026"
+  },
+  {
+    "slug": "erythritol-stroke-risk",
+    "img": "hero-erythritol-stroke-risk.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "بديل السكر «الإريثريتول» وخطر السكتة الدماغية: ما الذي وجدته دراسة جينية جديدة؟",
+    "en": "The sugar substitute erythritol and stroke risk: what a new genetic study found",
+    "fr": "L'édulcorant érythritol et le risque d'AVC : ce qu'une nouvelle étude génétique a trouvé"
+  },
+  {
     "slug": "long-sitting-heart-exercise",
     "img": "hero-long-sitting-heart-exercise.webp",
     "langs": [
