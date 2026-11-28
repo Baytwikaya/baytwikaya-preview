@@ -37,7 +37,7 @@
         /* Bandeau d'actualités animé : juste au-dessus du contenu de la page, sous la barre supérieure.
            Animation en CSS uniquement, mise en pause au survol ou au focus, et totalement désactivée si l'utilisateur préfère moins de mouvement. */
         .news-ticker { background-color: #0f766e; overflow: hidden; direction: ltr; }
-        .news-ticker-track { display: flex; width: max-content; animation: ticker-scroll 60s linear infinite; }
+        .news-ticker-track { display: flex; width: max-content; animation: ticker-scroll 120s linear infinite; }
         .news-ticker-set { display: flex; }
         .news-ticker:hover .news-ticker-track, .news-ticker:focus-within .news-ticker-track { animation-play-state: paused; }
         .news-ticker-item { display: flex; align-items: center; gap: 10px; padding: 8px 18px; color: #fff; text-decoration: none; white-space: nowrap; }
@@ -133,6 +133,20 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
     <div class="news-ticker" role="region" aria-label="Barre des dernières actualités">
         <div class="news-ticker-track" id="ticker-track">
             <div class="news-ticker-set" id="ticker-set-1">
+                <a class="news-ticker-item" href="news/guselkumab-psoriatic-arthritis-spine"><img src="../news/hero-guselkumab-psoriatic-arthritis-spine.webp" alt=""><span>Le guselkumab soulage la douleur et la raideur du rachis dans le rhumatisme psoriasique axial</span></a>
+                <a class="news-ticker-item" href="news/sugar-rationing-first-1000-days-aging"><img src="../news/hero-sugar-rationing-first-1000-days-aging.webp" alt=""><span>Le rationnement du sucre pendant les 1 000 premiers jours : un vieillissement biologique plus lent des décennies plus tard</span></a>
+                <a class="news-ticker-item" href="news/aging-brain-nighttime-cleaning-sleep"><img src="../news/hero-aging-brain-nighttime-cleaning-sleep.webp" alt=""><span>Le cerveau vieillissant se nettoie plus lentement pendant le sommeil</span></a>
+                <a class="news-ticker-item" href="news/stopping-statins-after-70"><img src="../news/hero-stopping-statins-after-70.webp" alt=""><span>Arrêter les statines après 70 ans : sûr à deux ans, mais avec un peu plus d&#x27;événements</span></a>
+                <a class="news-ticker-item" href="news/cannabis-occasional-use-stroke-risk"><img src="../news/hero-cannabis-occasional-use-stroke-risk.webp" alt=""><span>Le cannabis, même occasionnel : un risque accru d&#x27;AVC et de maladies cardiaques</span></a>
+                <a class="news-ticker-item" href="news/anxiety-sleep-drugs-memory-elderly"><img src="../news/hero-anxiety-sleep-drugs-memory-elderly.webp" alt=""><span>Des médicaments qui peuvent affaiblir la mémoire sont encore prescrits à un senior sur trois atteint de troubles cognitifs</span></a>
+                <a class="news-ticker-item" href="news/vitamin-d-deficiency-shorter-sleep"><img src="../news/hero-vitamin-d-deficiency-shorter-sleep.webp" alt=""><span>Un manque de vitamine D est lié à environ 23 minutes de sommeil en moins par nuit</span></a>
+                <a class="news-ticker-item" href="news/brazil-nuts-thyroid-help-or-harm"><img src="../news/hero-brazil-nuts-thyroid-help-or-harm.webp" alt=""><span>La noix du Brésil et la thyroïde : aide ou danger ?</span></a>
+                <a class="news-ticker-item" href="news/collagen-curcumin-knee-pain"><img src="../news/hero-collagen-curcumin-knee-pain.webp" alt=""><span>Collagène et curcumine contre la douleur au genou : un petit essai trouve un bénéfice pour les sportifs… pas pour les patients arthrosiques</span></a>
+                <a class="news-ticker-item" href="news/hpv-viral-load-cervical-lesions"><img src="../news/hero-hpv-viral-load-cervical-lesions.webp" alt=""><span>Charge virale du HPV : son évolution dans le temps peut-elle prédire le risque de cancer du col de l&#x27;utérus ?</span></a>
+                <a class="news-ticker-item" href="news/ovarian-cancer-rna-blood-test"><img src="../news/hero-ovarian-cancer-rna-blood-test.webp" alt=""><span>Un test sanguin pourrait-il détecter le cancer de l&#x27;ovaire des années avant l&#x27;apparition de la tumeur ?</span></a>
+                <a class="news-ticker-item" href="news/alzheimer-brain-activity-arc-score"><img src="../news/hero-alzheimer-brain-activity-arc-score.webp" alt=""><span>L&#x27;activité de votre cerveau pourrait-elle prédire Alzheimer des années avant le premier oubli ?</span></a>
+                <a class="news-ticker-item" href="news/stem-cells-knee-osteoarthritis-osca"><img src="../news/hero-stem-cells-knee-osteoarthritis-osca.webp" alt=""><span>Une injection de cellules souches pour le genou : peut-elle vraiment réparer le cartilage ?</span></a>
+                <a class="news-ticker-item" href="news/whole-wheat-bread-gut-blood-sugar"><img src="../news/hero-whole-wheat-bread-gut-blood-sugar.webp" alt=""><span>Le pain complet et la glycémie : vos bactéries intestinales font-elles la différence ?</span></a>
                 <a class="news-ticker-item" href="news/semaglutide-longevity-mice"><img src="../news/hero-semaglutide-longevity-mice.webp" alt=""><span>Le sémaglutide prolonge la vie des souris de 12 % : les médicaments du diabète vont-ils ralentir le vieillissement ?</span></a>
                 <a class="news-ticker-item" href="news/rheumatoid-arthritis-ai-early-detection"><img src="../news/hero-rheumatoid-arthritis-ai-early-detection.webp" alt=""><span>La polyarthrite rhumatoïde commence des années avant la douleur : l’IA peut-elle la détecter tôt ?</span></a>
                 <a class="news-ticker-item" href="news/flu-vaccine-after-heart-attack"><img src="../news/hero-flu-vaccine-after-heart-attack.webp" alt=""><span>Après un infarctus, le vaccin contre la grippe réduit de moitié le risque de décès</span></a>
@@ -246,6 +260,20 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                 <a class="news-ticker-item" href="news/anti-fall-exercises"><img src="../news/hero-anti-fall.webp" alt=""><span>La chute n’est pas une fatalité après 60 ans : 5 exercices pour protéger votre équilibre — ce que la science a prouvé</span></a>
             </div>
             <div class="news-ticker-set" id="ticker-set-2" aria-hidden="true">
+                <a class="news-ticker-item" href="news/guselkumab-psoriatic-arthritis-spine" tabindex="-1"><img src="../news/hero-guselkumab-psoriatic-arthritis-spine.webp" alt=""><span>Le guselkumab soulage la douleur et la raideur du rachis dans le rhumatisme psoriasique axial</span></a>
+                <a class="news-ticker-item" href="news/sugar-rationing-first-1000-days-aging" tabindex="-1"><img src="../news/hero-sugar-rationing-first-1000-days-aging.webp" alt=""><span>Le rationnement du sucre pendant les 1 000 premiers jours : un vieillissement biologique plus lent des décennies plus tard</span></a>
+                <a class="news-ticker-item" href="news/aging-brain-nighttime-cleaning-sleep" tabindex="-1"><img src="../news/hero-aging-brain-nighttime-cleaning-sleep.webp" alt=""><span>Le cerveau vieillissant se nettoie plus lentement pendant le sommeil</span></a>
+                <a class="news-ticker-item" href="news/stopping-statins-after-70" tabindex="-1"><img src="../news/hero-stopping-statins-after-70.webp" alt=""><span>Arrêter les statines après 70 ans : sûr à deux ans, mais avec un peu plus d&#x27;événements</span></a>
+                <a class="news-ticker-item" href="news/cannabis-occasional-use-stroke-risk" tabindex="-1"><img src="../news/hero-cannabis-occasional-use-stroke-risk.webp" alt=""><span>Le cannabis, même occasionnel : un risque accru d&#x27;AVC et de maladies cardiaques</span></a>
+                <a class="news-ticker-item" href="news/anxiety-sleep-drugs-memory-elderly" tabindex="-1"><img src="../news/hero-anxiety-sleep-drugs-memory-elderly.webp" alt=""><span>Des médicaments qui peuvent affaiblir la mémoire sont encore prescrits à un senior sur trois atteint de troubles cognitifs</span></a>
+                <a class="news-ticker-item" href="news/vitamin-d-deficiency-shorter-sleep" tabindex="-1"><img src="../news/hero-vitamin-d-deficiency-shorter-sleep.webp" alt=""><span>Un manque de vitamine D est lié à environ 23 minutes de sommeil en moins par nuit</span></a>
+                <a class="news-ticker-item" href="news/brazil-nuts-thyroid-help-or-harm" tabindex="-1"><img src="../news/hero-brazil-nuts-thyroid-help-or-harm.webp" alt=""><span>La noix du Brésil et la thyroïde : aide ou danger ?</span></a>
+                <a class="news-ticker-item" href="news/collagen-curcumin-knee-pain" tabindex="-1"><img src="../news/hero-collagen-curcumin-knee-pain.webp" alt=""><span>Collagène et curcumine contre la douleur au genou : un petit essai trouve un bénéfice pour les sportifs… pas pour les patients arthrosiques</span></a>
+                <a class="news-ticker-item" href="news/hpv-viral-load-cervical-lesions" tabindex="-1"><img src="../news/hero-hpv-viral-load-cervical-lesions.webp" alt=""><span>Charge virale du HPV : son évolution dans le temps peut-elle prédire le risque de cancer du col de l&#x27;utérus ?</span></a>
+                <a class="news-ticker-item" href="news/ovarian-cancer-rna-blood-test" tabindex="-1"><img src="../news/hero-ovarian-cancer-rna-blood-test.webp" alt=""><span>Un test sanguin pourrait-il détecter le cancer de l&#x27;ovaire des années avant l&#x27;apparition de la tumeur ?</span></a>
+                <a class="news-ticker-item" href="news/alzheimer-brain-activity-arc-score" tabindex="-1"><img src="../news/hero-alzheimer-brain-activity-arc-score.webp" alt=""><span>L&#x27;activité de votre cerveau pourrait-elle prédire Alzheimer des années avant le premier oubli ?</span></a>
+                <a class="news-ticker-item" href="news/stem-cells-knee-osteoarthritis-osca" tabindex="-1"><img src="../news/hero-stem-cells-knee-osteoarthritis-osca.webp" alt=""><span>Une injection de cellules souches pour le genou : peut-elle vraiment réparer le cartilage ?</span></a>
+                <a class="news-ticker-item" href="news/whole-wheat-bread-gut-blood-sugar" tabindex="-1"><img src="../news/hero-whole-wheat-bread-gut-blood-sugar.webp" alt=""><span>Le pain complet et la glycémie : vos bactéries intestinales font-elles la différence ?</span></a>
                 <a class="news-ticker-item" href="news/semaglutide-longevity-mice" tabindex="-1"><img src="../news/hero-semaglutide-longevity-mice.webp" alt=""><span>Le sémaglutide prolonge la vie des souris de 12 % : les médicaments du diabète vont-ils ralentir le vieillissement ?</span></a>
                 <a class="news-ticker-item" href="news/rheumatoid-arthritis-ai-early-detection" tabindex="-1"><img src="../news/hero-rheumatoid-arthritis-ai-early-detection.webp" alt=""><span>La polyarthrite rhumatoïde commence des années avant la douleur : l’IA peut-elle la détecter tôt ?</span></a>
                 <a class="news-ticker-item" href="news/flu-vaccine-after-heart-attack" tabindex="-1"><img src="../news/hero-flu-vaccine-after-heart-attack.webp" alt=""><span>Après un infarctus, le vaccin contre la grippe réduit de moitié le risque de décès</span></a>
@@ -378,15 +406,15 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                 </div>
             </a>
             <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 mb-10">
-                <a href="news/obesity-definition-dementia-risk" class="flex flex-col md:flex-row">
+                <a href="news/cannabis-occasional-use-stroke-risk" class="flex flex-col md:flex-row">
                     <div class="md:w-2/5 shrink-0">
-                        <img src="../news/hero-obesity-definition-dementia-risk.webp" alt="Une diététicienne en blouse blanche mesurant le tour de taille d’une personne entièrement habillée avec un mètre ruban" class="w-full h-44 md:h-full object-cover">
+                        <img src="../news/hero-cannabis-occasional-use-stroke-risk.webp" alt="Feuilles de cannabis vertes en gros plan" class="w-full h-44 md:h-full object-cover">
                     </div>
                     <div class="p-5 md:p-6 flex flex-col justify-center">
                         <p class="mb-2"><span class="inline-block bg-teal-700 text-white text-xs font-bold px-3 py-1 rounded-full">Dernier article</span></p>
-                        <p class="text-gray-400 text-sm mb-1">26 novembre 2026 · Obésité et santé du cerveau · Actualités du monde de la santé</p>
-                        <h2 class="text-xl md:text-2xl font-bold text-teal-900 mb-2 leading-snug">L&#x27;IMC seul peut masquer le risque de démence : une nouvelle définition de l&#x27;obésité identifie davantage de personnes à risque</h2>
-                        <p class="text-gray-600 leading-relaxed text-sm md:text-base" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">Une étude publiée le 25 novembre 2026 dans Neurology : en ajoutant la mesure du tour de taille, la tension artérielle et le diabète à l&#x27;IMC, plus de 80 % des personnes en surpoids ont été reclassées comme obèses, et elles présentaient un risque de démence supérieur de 93 %. L&#x27;étude est toutefois observationnelle et ne prouve pas que l&#x27;obésité cause la démence.</p>
+                        <p class="text-gray-400 text-sm mb-1">28 novembre 2026 · Cannabis et AVC · Actualités du monde de la santé</p>
+                        <h2 class="text-xl md:text-2xl font-bold text-teal-900 mb-2 leading-snug">Le cannabis, même occasionnel : un risque accru d&#x27;AVC et de maladies cardiaques</h2>
+                        <p class="text-gray-600 line-clamp-2">Une étude préliminaire présentée aux Sessions scientifiques 2026 de l&#x27;American Heart Association a révélé que les adultes qui consomment du cannabis seulement occasionnellement avaient un risque accru d&#x27;AVC et de maladies cardiovasculaires par rapport à ceux qui n&#x27;en consomment jamais.</p>
                     </div>
                 </a>
             </article>
@@ -397,6 +425,137 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
             <h2 class="text-2xl md:text-3xl font-bold text-teal-900 mb-6">Dernières actualités</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="news-grid">
+                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/cannabis-occasional-use-stroke-risk" class="flex flex-col flex-grow">
+                        <img src="../news/hero-cannabis-occasional-use-stroke-risk.webp" alt="Feuilles de cannabis vertes en gros plan" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">28 novembre 2026 · Cannabis et AVC · Actualités du monde de la santé</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Le cannabis, même occasionnel : un risque accru d&#x27;AVC et de maladies cardiaques</h2>
+                        </div>
+                    </a>
+                </article>
+                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/stopping-statins-after-70" class="flex flex-col flex-grow">
+                        <img src="../news/hero-stopping-statins-after-70.webp" alt="Un homme assis sur un canapé prend des comprimés avec un verre d&#x27;eau" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">28 novembre 2026 · Cholestérol et cœur · Actualités du monde de la santé</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Arrêter les statines après 70 ans : sûr à deux ans, mais avec un peu plus d&#x27;événements</h2>
+                        </div>
+                    </a>
+                </article>
+                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/aging-brain-nighttime-cleaning-sleep" class="flex flex-col flex-grow">
+                        <img src="../news/hero-aging-brain-nighttime-cleaning-sleep.webp" alt="Homme âgé endormi dans une chambre élégante" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">28 novembre 2026 · Sommeil et cerveau · Actualités du monde de la santé</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Le cerveau vieillissant se nettoie plus lentement pendant le sommeil</h2>
+                        </div>
+                    </a>
+                </article>
+                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/sugar-rationing-first-1000-days-aging" class="flex flex-col flex-grow">
+                        <img src="../news/hero-sugar-rationing-first-1000-days-aging.webp" alt="Une femme enceinte prépare une salade saine dans une cuisine moderne et lumineuse" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">28 novembre 2026 · Nutrition et vieillissement · Actualités du monde de la santé</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Le rationnement du sucre pendant les 1 000 premiers jours : un vieillissement biologique plus lent des décennies plus tard</h2>
+                        </div>
+                    </a>
+                </article>
+                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/guselkumab-psoriatic-arthritis-spine" class="flex flex-col flex-grow">
+                        <img src="../news/hero-guselkumab-psoriatic-arthritis-spine.webp" alt="Gros plan d&#x27;un homme se tenant le bas du dos de douleur" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">28 novembre 2026 · Articulations et rhumatisme · Actualités du monde de la santé</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Le guselkumab soulage la douleur et la raideur du rachis dans le rhumatisme psoriasique axial</h2>
+                        </div>
+                    </a>
+                </article>
+                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/anxiety-sleep-drugs-memory-elderly" class="flex flex-col flex-grow">
+                        <img src="../news/hero-anxiety-sleep-drugs-memory-elderly.webp" alt="Un homme âgé prenant son médicament avec un verre d’eau à table, à la maison" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">27 novembre 2026 · Médicaments et mémoire · Actualités du monde de la santé</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Des médicaments qui peuvent affaiblir la mémoire sont encore prescrits à un senior sur trois atteint de troubles cognitifs</h2>
+                        </div>
+                    </a>
+                </article>
+                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/vitamin-d-deficiency-shorter-sleep" class="flex flex-col flex-grow">
+                        <img src="../news/hero-vitamin-d-deficiency-shorter-sleep.webp" alt="Un homme dormant paisiblement dans son lit, la lumière du matin entrant par la fenêtre" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">27 novembre 2026 · Vitamine D et sommeil · Actualités du monde de la santé</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Un manque de vitamine D est lié à environ 23 minutes de sommeil en moins par nuit</h2>
+                        </div>
+                    </a>
+                </article>
+                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
+                    <a href="news/brazil-nuts-thyroid-help-or-harm" class="flex flex-col flex-grow">
+                        <img src="../news/hero-brazil-nuts-thyroid-help-or-harm.webp" alt="Des noix du Brésil en coque exposées sur un marché au Brésil" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">27 novembre 2026 · Nutrition et thyroïde · Actualités du monde de la santé</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">La noix du Brésil et la thyroïde : aide ou danger ?</h2>
+                        </div>
+                    </a>
+                </article>
+                <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-[#c9a227] flex flex-col">
+                    <a href="news/collagen-curcumin-knee-pain" class="flex flex-col flex-grow">
+                        <img src="../news/hero-collagen-curcumin-knee-pain.webp" alt="Un homme assis sur un canapé, tenant son genou douloureux" class="w-full object-cover" style="aspect-ratio:16/10">
+                        <div class="p-5 flex flex-col flex-grow">
+                            <p class="text-gray-400 text-sm mb-2">27 novembre 2026 · Douleur au genou et compléments · Actualités du monde de la santé</p>
+                            <h2 class="text-lg font-bold text-teal-900 leading-snug">Collagène et curcumine contre la douleur au genou : un petit essai trouve un bénéfice pour les sportifs… pas pour les patients arthrosiques</h2>
+                        </div>
+                    </a>
+                </article>
+                <article class="bg-white rounded-3xl shadow-lg overflow-hidden border-t-4 border-teal-700">
+                    <a href="news/whole-wheat-bread-gut-blood-sugar">
+                        <img src="../news/hero-whole-wheat-bread-gut-blood-sugar.webp" alt="Tranches de pain complet sur une surface en bois avec des épis de blé" class="w-full h-40 object-cover">
+                        <div class="p-5">
+                            <p class="text-gray-400 text-sm mb-1">27 novembre 2026 · Nutrition et glycémie</p>
+                            <h3 class="text-lg font-bold text-teal-900 leading-snug">Le pain complet et la glycémie : vos bactéries intestinales font-elles la différence ?</h3>
+                            <p class="text-gray-600 text-sm mt-2 line-clamp-2">Un essai clinique de l&#x27;Université d&#x27;État de l&#x27;Ohio a montré que remplacer le pain blanc raffiné par du pain complet améliorait le contrôle de la glycémie chez les personnes atteintes de prédiabète : le pic de sucre après un test de tolérance au glucose a baissé de 27 % en moyenne. Les chercheurs ont aussi constaté que les bactéries intestinales étaient liées à l&#x27;ampleur du bénéfice obtenu par chaque participant.</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="bg-white rounded-3xl shadow-lg overflow-hidden border-t-4 border-amber-500">
+                    <a href="news/stem-cells-knee-osteoarthritis-osca">
+                        <img src="../news/hero-stem-cells-knee-osteoarthritis-osca.webp" alt="Un physiothérapeute massant le genou d&#x27;un patient pendant une séance" class="w-full h-40 object-cover">
+                        <div class="p-5">
+                            <p class="text-gray-400 text-sm mb-1">27 novembre 2026 · Arthrose du genou et thérapie régénérative</p>
+                            <h3 class="text-lg font-bold text-teal-900 leading-snug">Une injection de cellules souches pour le genou : peut-elle vraiment réparer le cartilage ?</h3>
+                            <p class="text-gray-600 text-sm mt-2 line-clamp-2">Une étude de phase 2a présentée au congrès ACR Convergence de l&#x27;American College of Rheumatology a montré qu&#x27;une seule injection d&#x27;OSCA — des cellules souches dérivées du sang de cordon ombilical associées à une matrice cartilagineuse — a nettement soulagé la douleur du genou pendant six mois. Environ 78 % des patients ont répondu au traitement, contre 39 % avec le placebo, avec des signes précoces d&#x27;amélioration du cartilage à l&#x27;IRM.</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="bg-white rounded-3xl shadow-lg overflow-hidden border-t-4 border-teal-700">
+                    <a href="news/alzheimer-brain-activity-arc-score">
+                        <img src="../news/hero-alzheimer-brain-activity-arc-score.webp" alt="Images d&#x27;IRM cérébrale affichées sur un négatoscope" class="w-full h-40 object-cover">
+                        <div class="p-5">
+                            <p class="text-gray-400 text-sm mb-1">27 novembre 2026 · Alzheimer et santé du cerveau</p>
+                            <h3 class="text-lg font-bold text-teal-900 leading-snug">L&#x27;activité de votre cerveau pourrait-elle prédire Alzheimer des années avant le premier oubli ?</h3>
+                            <p class="text-gray-600 text-sm mt-2 line-clamp-2">Une étude menée par Stanford Medicine et publiée dans Science Advances a montré qu&#x27;un schéma d&#x27;activité cérébrale au repos, résumé par un nouveau score appelé ARC, peut prédire le déclin cognitif et un diagnostic d&#x27;Alzheimer jusqu&#x27;à 12 ans à l&#x27;avance, mieux que les biomarqueurs établis. Le score a distingué les super-agers des patients atteints d&#x27;Alzheimer avec une précision d&#x27;environ 85 %.</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="bg-white rounded-3xl shadow-lg overflow-hidden border-t-4 border-amber-500">
+                    <a href="news/ovarian-cancer-rna-blood-test">
+                        <img src="../news/hero-ovarian-cancer-rna-blood-test.webp" alt="Tubes à essai contenant des liquides colorés dans un laboratoire" class="w-full h-40 object-cover">
+                        <div class="p-5">
+                            <p class="text-gray-400 text-sm mb-1">27 novembre 2026 · Cancer et dépistage précoce</p>
+                            <h3 class="text-lg font-bold text-teal-900 leading-snug">Un test sanguin pourrait-il détecter le cancer de l&#x27;ovaire des années avant l&#x27;apparition de la tumeur ?</h3>
+                            <p class="text-gray-600 text-sm mt-2 line-clamp-2">Des chercheurs du Hoag Family Cancer Institute ont identifié Tu-Stroma, une molécule d&#x27;ARN présente dans le sang qui signale le STIC, le stade précancéreux le plus précoce du cancer séreux ovarien de haut grade. Dans un groupe de validation, le test a détecté le STIC chez 92,3 % des femmes qui en étaient atteintes et a correctement identifié 98,2 % des femmes en bonne santé.</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="bg-white rounded-3xl shadow-lg overflow-hidden border-t-4 border-teal-700">
+                    <a href="news/hpv-viral-load-cervical-lesions">
+                        <img src="../news/hero-hpv-viral-load-cervical-lesions.webp" alt="Un médecin consultant une patiente à une table avec des documents médicaux" class="w-full h-40 object-cover">
+                        <div class="p-5">
+                            <p class="text-gray-400 text-sm mb-1">27 novembre 2026 · Santé des femmes et cancer du col de l&#x27;utérus</p>
+                            <h3 class="text-lg font-bold text-teal-900 leading-snug">Charge virale du HPV : son évolution dans le temps peut-elle prédire le risque de cancer du col de l&#x27;utérus ?</h3>
+                            <p class="text-gray-600 text-sm mt-2 line-clamp-2">Une nouvelle étude chinoise publiée dans CANCER a suivi 624 femmes atteintes d&#x27;une infection persistante au papillomavirus humain et a constaté que l&#x27;évolution de la charge virale dans le temps prédit le risque de lésions précancéreuses du col de l&#x27;utérus. Des lésions sont apparues chez seulement 10,9 % des femmes du groupe à charge faible et stable, contre 90,4 % dans le groupe à charge élevée persistante.</p>
+                        </div>
+                    </a>
+                </article>
                 <article class="bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-teal-700 flex flex-col">
                     <a href="news/semaglutide-longevity-mice" class="flex flex-col flex-grow">
                         <img src="../news/hero-semaglutide-longevity-mice.webp" alt="Un homme âgé faisant de l’exercice avec une corde à sauter sur une piste dans un parc" class="w-full object-cover" style="aspect-ratio:16/10">
@@ -1426,32 +1585,32 @@ nav a.nav-neon::after,div#mobile-menu a.nav-neon::after{content:"";position:abso
                             <p class="text-gray-400 text-sm">18 novembre 2026</p>
                         </div>
                     </li>
-<li class="flex items-start gap-4">
-                        <span class="text-2xl font-extrabold text-[#c9a227] leading-none">2</span>
+                    <li class="flex items-start gap-4">
+                        <span class="text-2xl font-black text-teal-700 shrink-0">2</span>
                         <div>
-                            <a href="news/blood-sugar-young-adults-brain" class="font-bold text-teal-900 hover:underline text-lg leading-snug">La glycémie grimpe doucement dès le jeune âge : comment affecte-t-elle votre mémoire à la cinquantaine, avant le diabète ?</a>
-                            <p class="text-gray-400 text-sm">26 novembre 2026 · Glycémie et santé du cerveau</p>
+                            <a href="news/stopping-statins-after-70" class="text-gray-800 font-semibold hover:text-teal-700 leading-snug">Arrêter les statines après 70 ans : sûr à deux ans, mais avec un peu plus d&#x27;événements</a>
+                            <p class="text-gray-400 text-sm">28 novembre 2026 · Cholestérol et cœur</p>
                         </div>
                     </li>
-<li class="flex items-start gap-4">
-                        <span class="text-2xl font-extrabold text-[#c9a227] leading-none">3</span>
+                    <li class="flex items-start gap-4">
+                        <span class="text-2xl font-black text-teal-700 shrink-0">3</span>
                         <div>
-                            <a href="news/paxlovid-long-covid-risk" class="font-bold text-teal-900 hover:underline text-lg leading-snug">Paxlovid et Covid long : le médicament peut-il réduire le risque de symptômes persistants ? Ce qu&#x27;a montré la plus grande étude en vie réelle</a>
-                            <p class="text-gray-400 text-sm">26 novembre 2026 · Covid long et médicaments</p>
+                            <a href="news/aging-brain-nighttime-cleaning-sleep" class="text-gray-800 font-semibold hover:text-teal-700 leading-snug">Le cerveau vieillissant se nettoie plus lentement pendant le sommeil</a>
+                            <p class="text-gray-400 text-sm">28 novembre 2026 · Sommeil et cerveau</p>
                         </div>
                     </li>
-<li class="flex items-start gap-4">
-                        <span class="text-2xl font-extrabold text-[#c9a227] leading-none">4</span>
+                    <li class="flex items-start gap-4">
+                        <span class="text-2xl font-black text-teal-700 shrink-0">4</span>
                         <div>
-                            <a href="news/exercise-after-70-strength-walking" class="font-bold text-teal-900 hover:underline text-lg leading-snug">Après 70 ans : un an d&#x27;exercice renforce les muscles et accélère la marche — même sans prendre de masse musculaire</a>
-                            <p class="text-gray-400 text-sm">26 novembre 2026 · Exercice et seniors</p>
+                            <a href="news/sugar-rationing-first-1000-days-aging" class="text-gray-800 font-semibold hover:text-teal-700 leading-snug">Le rationnement du sucre pendant les 1 000 premiers jours : un vieillissement biologique plus lent des décennies plus tard</a>
+                            <p class="text-gray-400 text-sm">28 novembre 2026 · Nutrition et vieillissement</p>
                         </div>
                     </li>
-<li class="flex items-start gap-4">
-                        <span class="text-2xl font-extrabold text-[#c9a227] leading-none">5</span>
+                    <li class="flex items-start gap-4">
+                        <span class="text-2xl font-black text-teal-700 shrink-0">5</span>
                         <div>
-                            <a href="news/gut-diet-osteoarthritis-risk" class="font-bold text-teal-900 hover:underline text-lg leading-snug">Une alimentation favorable à l&#x27;intestin et des articulations plus solides : votre façon de manger peut-elle protéger vos genoux de l&#x27;arthrose ?</a>
-                            <p class="text-gray-400 text-sm">26 novembre 2026 · Nutrition et articulations</p>
+                            <a href="news/guselkumab-psoriatic-arthritis-spine" class="text-gray-800 font-semibold hover:text-teal-700 leading-snug">Le guselkumab soulage la douleur et la raideur du rachis dans le rhumatisme psoriasique axial</a>
+                            <p class="text-gray-400 text-sm">28 novembre 2026 · Articulations et rhumatisme</p>
                         </div>
                     </li>
                 </ol>

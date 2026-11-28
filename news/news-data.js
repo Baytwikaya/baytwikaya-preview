@@ -5,6 +5,258 @@
    Used by news-article.js to build the related-articles block. */
 var BAYT_NEWS_DATA = [
   {
+    "slug": "cannabis-occasional-use-stroke-risk",
+    "img": "hero-cannabis-occasional-use-stroke-risk.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "date": "2026-11-28",
+    "cat": {
+      "ar": "القنب والسكتة الدماغية",
+      "en": "Cannabis and stroke",
+      "fr": "Cannabis et AVC"
+    },
+    "ar": "القنب حتى من حين إلى آخر: خطر أعلى للسكتة الدماغية وأمراض القلب",
+    "en": "Cannabis, Even Occasionally: Higher Odds of Stroke and Heart Disease",
+    "fr": "Le cannabis, même occasionnel : un risque accru d'AVC et de maladies cardiaques"
+  },
+  {
+    "slug": "stopping-statins-after-70",
+    "img": "hero-stopping-statins-after-70.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "date": "2026-11-28",
+    "cat": {
+      "ar": "الكوليسترول والقلب",
+      "en": "Cholesterol and the heart",
+      "fr": "Cholestérol et cœur"
+    },
+    "ar": "إيقاف الستاتينات بعد السبعين: آمن عند عامين لكن الأحداث أعلى قليلا",
+    "en": "Stopping Statins After 70: Safe at Two Years, but Events Ran Slightly Higher",
+    "fr": "Arrêter les statines après 70 ans : sûr à deux ans, mais avec un peu plus d'événements"
+  },
+  {
+    "slug": "aging-brain-nighttime-cleaning-sleep",
+    "img": "hero-aging-brain-nighttime-cleaning-sleep.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "date": "2026-11-28",
+    "cat": {
+      "ar": "النوم والدماغ",
+      "en": "Sleep and the brain",
+      "fr": "Sommeil et cerveau"
+    },
+    "ar": "الدماغ المتقدم في السن ينظف نفسه أثناء النوم ببطء أكبر",
+    "en": "The Ageing Brain Cleans Itself More Slowly During Sleep",
+    "fr": "Le cerveau vieillissant se nettoie plus lentement pendant le sommeil"
+  },
+  {
+    "slug": "sugar-rationing-first-1000-days-aging",
+    "img": "hero-sugar-rationing-first-1000-days-aging.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "date": "2026-11-28",
+    "cat": {
+      "ar": "التغذية والشيخوخة",
+      "en": "Nutrition and ageing",
+      "fr": "Nutrition et vieillissement"
+    },
+    "ar": "تقنين السكر في الألف يوم الأولى: شيخوخة بيولوجية أبطأ بعد عقود",
+    "en": "Sugar Rationing in the First 1,000 Days: Slower Biological Ageing Decades Later",
+    "fr": "Le rationnement du sucre pendant les 1 000 premiers jours : un vieillissement biologique plus lent des décennies plus tard"
+  },
+  {
+    "slug": "guselkumab-psoriatic-arthritis-spine",
+    "img": "hero-guselkumab-psoriatic-arthritis-spine.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "date": "2026-11-28",
+    "cat": {
+      "ar": "المفاصل والروماتيزم",
+      "en": "Joints and rheumatism",
+      "fr": "Articulations et rhumatisme"
+    },
+    "ar": "غوسيلكوماب يخفف ألم العمود الفقري وتيبّسه في التهاب المفاصل الصدفي المحوري",
+    "en": "Guselkumab Eases Spinal Pain and Stiffness in Axial Psoriatic Arthritis",
+    "fr": "Le guselkumab soulage la douleur et la raideur du rachis dans le rhumatisme psoriasique axial"
+  },
+  {
+    "slug": "anxiety-sleep-drugs-memory-elderly",
+    "img": "hero-anxiety-sleep-drugs-memory-elderly.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "date": "2026-11-27",
+    "cat": {
+      "ar": "الأدوية والذاكرة",
+      "en": "Medicines and memory",
+      "fr": "Médicaments et mémoire"
+    },
+    "ar": "أدوية قد تُضعف الذاكرة ما زالت تُوصف لثلث المسنّين المصابين باضطرابات إدراكية",
+    "en": "Medicines that can weaken memory are still prescribed to one in three older adults with cognitive disorders",
+    "fr": "Des médicaments qui peuvent affaiblir la mémoire sont encore prescrits à un senior sur trois atteint de troubles cognitifs"
+  },
+  {
+    "slug": "vitamin-d-deficiency-shorter-sleep",
+    "img": "hero-vitamin-d-deficiency-shorter-sleep.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "date": "2026-11-27",
+    "cat": {
+      "ar": "فيتامين د والنوم",
+      "en": "Vitamin D and sleep",
+      "fr": "Vitamine D et sommeil"
+    },
+    "ar": "نقص فيتامين د يرتبط بنوم أقصر بنحو 23 دقيقة في الليلة",
+    "en": "Vitamin D deficiency is linked to about 23 minutes less sleep a night",
+    "fr": "Un manque de vitamine D est lié à environ 23 minutes de sommeil en moins par nuit"
+  },
+  {
+    "slug": "brazil-nuts-thyroid-help-or-harm",
+    "img": "hero-brazil-nuts-thyroid-help-or-harm.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "date": "2026-11-27",
+    "cat": {
+      "ar": "التغذية والغدة الدرقية",
+      "en": "Nutrition and the thyroid",
+      "fr": "Nutrition et thyroïde"
+    },
+    "ar": "الجوز البرازيلي والغدة الدرقية: هل يعالجها أم يضرّها؟",
+    "en": "Brazil nuts and the thyroid: do they help or harm?",
+    "fr": "La noix du Brésil et la thyroïde : aide ou danger ?"
+  },
+  {
+    "slug": "collagen-curcumin-knee-pain",
+    "img": "hero-collagen-curcumin-knee-pain.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "date": "2026-11-27",
+    "cat": {
+      "ar": "ألم الركبة والمكملات",
+      "en": "Knee pain and supplements",
+      "fr": "Douleur au genou et compléments"
+    },
+    "ar": "كولاجين وكركمين لألم الركبة: تجربة صغيرة تجد فائدة للرياضيين… لا لمرضى الخشونة",
+    "en": "Collagen plus curcumin for knee pain: a small trial finds a benefit for athletes… not for osteoarthritis patients",
+    "fr": "Collagène et curcumine contre la douleur au genou : un petit essai trouve un bénéfice pour les sportifs… pas pour les patients arthrosiques"
+  },
+  {
+    "slug": "whole-wheat-bread-gut-blood-sugar",
+    "img": "hero-whole-wheat-bread-gut-blood-sugar.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "الخبز الكامل وسكر الدم: هل تصنع بكتيريا أمعائك الفرق؟",
+    "en": "Whole-Wheat Bread and Blood Sugar: Could Your Gut Bacteria Make the Difference?",
+    "fr": "Le pain complet et la glycémie : vos bactéries intestinales font-elles la différence ?",
+    "date": "2026-11-27",
+    "cat": {
+      "ar": "التغذية وسكر الدم",
+      "en": "Nutrition and blood sugar",
+      "fr": "Nutrition et glycémie"
+    }
+  },
+  {
+    "slug": "stem-cells-knee-osteoarthritis-osca",
+    "img": "hero-stem-cells-knee-osteoarthritis-osca.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "حقنة خلايا جذعية للركبة: هل تُصلح الغضروف فعلاً؟",
+    "en": "A stem-cell injection for the knee: can it really repair cartilage?",
+    "fr": "Une injection de cellules souches pour le genou : peut-elle vraiment réparer le cartilage ?",
+    "date": "2026-11-27",
+    "cat": {
+      "ar": "خشونة الركبة والعلاج التجديدي",
+      "en": "Knee osteoarthritis and regenerative therapy",
+      "fr": "Arthrose du genou et thérapie régénérative"
+    }
+  },
+  {
+    "slug": "alzheimer-brain-activity-arc-score",
+    "img": "hero-alzheimer-brain-activity-arc-score.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "نشاط دماغك قد يتنبأ بألزهايمر قبل سنوات من أول نسيان",
+    "en": "Could your brain activity predict Alzheimer's years before the first forgotten name?",
+    "fr": "L'activité de votre cerveau pourrait-elle prédire Alzheimer des années avant le premier oubli ?",
+    "date": "2026-11-27",
+    "cat": {
+      "ar": "ألزهايمر وصحة الدماغ",
+      "en": "Alzheimer's and brain health",
+      "fr": "Alzheimer et santé du cerveau"
+    }
+  },
+  {
+    "slug": "ovarian-cancer-rna-blood-test",
+    "img": "hero-ovarian-cancer-rna-blood-test.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "تحليل دم يكشف سرطان المبيض قبل سنوات من ظهور الورم؟",
+    "en": "Could a blood test detect ovarian cancer years before a tumour appears?",
+    "fr": "Un test sanguin pourrait-il détecter le cancer de l'ovaire des années avant l'apparition de la tumeur ?",
+    "date": "2026-11-27",
+    "cat": {
+      "ar": "السرطان والكشف المبكر",
+      "en": "Cancer and early detection",
+      "fr": "Cancer et dépistage précoce"
+    }
+  },
+  {
+    "slug": "hpv-viral-load-cervical-lesions",
+    "img": "hero-hpv-viral-load-cervical-lesions.webp",
+    "langs": [
+      "ar",
+      "en",
+      "fr"
+    ],
+    "ar": "فيروس الورم الحليمي: هل يكشف مسار الحمل الفيروسي خطر سرطان عنق الرحم؟",
+    "en": "HPV viral load: can its trajectory over time predict cervical cancer risk?",
+    "fr": "Charge virale du HPV : son évolution dans le temps peut-elle prédire le risque de cancer du col de l'utérus ?",
+    "date": "2026-11-27",
+    "cat": {
+      "ar": "صحة المرأة وسرطان عنق الرحم",
+      "en": "Women's health and cervical cancer",
+      "fr": "Santé des femmes et cancer du col de l'utérus"
+    }
+  },
+  {
     "slug": "semaglutide-longevity-mice",
     "img": "hero-semaglutide-longevity-mice.webp",
     "langs": [
@@ -14,7 +266,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "سيماغلوتايد يطيل عمر الفئران بنسبة 12%: هل تقترب أدوية السكري من إبطاء الشيخوخة؟",
     "en": "Semaglutide extends mouse lifespan by 12%: are diabetes drugs nearing a way to slow ageing?",
-    "fr": "Le sémaglutide prolonge la vie des souris de 12 % : les médicaments du diabète vont-ils ralentir le vieillissement ?"
+    "fr": "Le sémaglutide prolonge la vie des souris de 12 % : les médicaments du diabète vont-ils ralentir le vieillissement ?",
+    "date": "2026-11-28",
+    "cat": {
+      "ar": "السكري والشيخوخة",
+      "en": "Diabetes and ageing",
+      "fr": "Diabète et vieillissement"
+    }
   },
   {
     "slug": "rheumatoid-arthritis-ai-early-detection",
@@ -26,7 +284,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الروماتويد يبدأ قبل الألم بسنوات: هل يكشف الذكاء الاصطناعي المرض مبكراً؟",
     "en": "Rheumatoid arthritis starts years before the pain: can AI detect it early?",
-    "fr": "La polyarthrite rhumatoïde commence des années avant la douleur : l’IA peut-elle la détecter tôt ?"
+    "fr": "La polyarthrite rhumatoïde commence des années avant la douleur : l’IA peut-elle la détecter tôt ?",
+    "date": "2026-11-29",
+    "cat": {
+      "ar": "الروماتويد والذكاء الاصطناعي",
+      "en": "Rheumatoid arthritis and AI",
+      "fr": "Polyarthrite rhumatoïde et intelligence artificielle"
+    }
   },
   {
     "slug": "flu-vaccine-after-heart-attack",
@@ -38,7 +302,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "بعد النوبة القلبية، لقاح الإنفلونزا يخفض خطر الوفاة للنصف تقريباً",
     "en": "After a heart attack, a flu shot nearly halves the risk of death",
-    "fr": "Après un infarctus, le vaccin contre la grippe réduit de moitié le risque de décès"
+    "fr": "Après un infarctus, le vaccin contre la grippe réduit de moitié le risque de décès",
+    "date": "2026-11-30",
+    "cat": {
+      "ar": "القلب واللقاحات",
+      "en": "Heart and vaccines",
+      "fr": "Cœur et vaccins"
+    }
   },
   {
     "slug": "ibs-seven-warning-signs",
@@ -50,7 +320,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "متلازمة القولون العصبي: 7 علامات تحذيرية تستدعي زيارة الطبيب",
     "en": "Irritable bowel syndrome: 7 warning signs that call for a doctor’s visit",
-    "fr": "Syndrome de l’intestin irritable : 7 signes d’alerte qui doivent conduire chez le médecin"
+    "fr": "Syndrome de l’intestin irritable : 7 signes d’alerte qui doivent conduire chez le médecin",
+    "date": "2026-12-01",
+    "cat": {
+      "ar": "القولون العصبي",
+      "en": "Irritable bowel syndrome",
+      "fr": "Syndrome de l’intestin irritable"
+    }
   },
   {
     "slug": "fatty-liver-two-new-drugs",
@@ -62,7 +338,13 @@ var BAYT_NEWS_DATA = [
     ],
     "ar": "الكبد الدهني: دواءان جديدان يفتحان باباً لعلاج لم يكن موجوداً",
     "en": "Fatty liver: two new drugs open the door to a treatment that did not exist",
-    "fr": "Stéatose hépatique : deux nouveaux médicaments ouvrent la voie à un traitement qui n’existait pas"
+    "fr": "Stéatose hépatique : deux nouveaux médicaments ouvrent la voie à un traitement qui n’existait pas",
+    "date": "2026-12-02",
+    "cat": {
+      "ar": "الكبد الدهني",
+      "en": "Fatty liver",
+      "fr": "Stéatose hépatique"
+    }
   },
   {
     "slug": "obesity-definition-dementia-risk",
